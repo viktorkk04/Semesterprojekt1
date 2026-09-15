@@ -10,6 +10,8 @@ for (y = 1; y <= 3; y++){
         Console.Write("-");
         //Console.Write(x*1);
         //Console.WriteLine(y*1);
+        // 
+        // Viktor
     }   
     
 }
