@@ -1,0 +1,26 @@
+[33mcommit faf9ae60a8c560b4b9faa3fa518405f1eaebca92[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 07135ab 0e4fc7d
+Author: Jakob Mejer <jakobmejerbob@gmail.com>
+Date:   Tue Sep 15 10:09:28 2026 +0200
+
+    Merge pull request #1 from viktorkk04/Viktor
+    
+    Viktor test part 2
+
+[33mcommit 0e4fc7dd6bc81f247d380601d396a6479ca8c3d1[m[33m ([m[1;31morigin/Viktor[m[33m, [m[1;32mViktor[m[33m)[m
+Author: Viktor Krolykke <viktorkrolykke@gmail.com>
+Date:   Tue Sep 15 09:47:06 2026 +0200
+
+    Viktor test part 2
+
+[33mcommit 07135abeb641ab84eb872743dc88ee995c88c62b[m[33m ([m[1;31morigin/Thorup[m[33m, [m[1;32mThorup[m[33m)[m
+Author: Viktor Krolykke <viktorkrolykke@gmail.com>
+Date:   Tue Sep 15 09:45:15 2026 +0200
+
+    Viktor test
+
+[33mcommit cf3e348da9477b555bb15e1d83505f03798d875f[m[33m ([m[1;31morigin/Jakki[m[33m, [m[1;32mJakki[m[33m)[m
+Author: Viktor Krolykke <viktorkrolykke@gmail.com>
+Date:   Tue Sep 15 09:13:19 2026 +0200
+
+    add filer
