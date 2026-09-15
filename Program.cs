@@ -16,3 +16,4 @@ for (y = 1; y <= 3; y++){
     
 }
 // middiff
+// Mejer er lort til LOL
