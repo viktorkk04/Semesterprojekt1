@@ -12,3 +12,4 @@ C:\Users\vikto\Desktop\uni 1.semester\semster projekt\obj\Debug\net10.0\refint\s
 C:\Users\vikto\Desktop\uni 1.semester\semster projekt\obj\Debug\net10.0\semster projekt.pdb
 C:\Users\vikto\Desktop\uni 1.semester\semster projekt\obj\Debug\net10.0\semster projekt.genruntimeconfig.cache
 C:\Users\vikto\Desktop\uni 1.semester\semster projekt\obj\Debug\net10.0\ref\semster projekt.dll
+C:\Users\vikto\Desktop\uni 1.semester\semster projekt\obj\Debug\net10.0\semster projekt.sourcelink.json

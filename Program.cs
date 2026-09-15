@@ -1,18 +1,16 @@
 ﻿int y= 0;
 int x= 0;
-//test fra min branch
-for (y = 1; y <= 3; y++){
-    Console.WriteLine("");
-    Console.Write("|");
+
+int mapSize = 6;
+string mellemrum = "";
+
+for (y = 1; y <= mapSize; y++){
+    // Reserverer 140 tegn
+    Console.Write($"{mellemrum,140}");
     //Console.Write(y*1);
-    for (x = 1; x <= 3; x++){
+    for (x = 1; x <= mapSize; x++){
         Console.Write("|");
         Console.Write("-");
-        //Console.Write(x*1);
-        //Console.WriteLine(y*1);
-        // 
-        // Viktor
     }   
-    
+    Console.WriteLine("|");
 }
-// middiff
