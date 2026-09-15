@@ -1,6 +1,6 @@
 ﻿int y= 0;
 int x= 0;
-
+//test fra min branch
 for (y = 1; y <= 3; y++){
     Console.WriteLine("");
     Console.Write("|");
