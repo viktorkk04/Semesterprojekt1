@@ -20,3 +20,10 @@ woz.zip: *.cs
 	zip -r woz.zip woz
 	rm -Rf woz
 
+
+build:
+	dotnet build
+
+run:
+	dotnet run
+
