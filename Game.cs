@@ -2,10 +2,10 @@
  */
 
 class Game {
-  static World    world    = new World();
+  static World    world    = new World(); 
   static Context  context  = new Context(world.GetEntry());
   
-  static void Main (string[] args) {
+  static void Main (string[] args) { // This is the main gameplay loop
     Console.WriteLine("Welcome to the World of Zuul!");
     
     context.GetCurrent().Welcome();
