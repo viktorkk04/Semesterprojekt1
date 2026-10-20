@@ -13,7 +13,7 @@ class Context {
     return current;
   }
   
-  public void Transition (string direction) {
+  public void Transition (string direction) { // This is the transition function
     Space next = current.FollowEdge(direction);
     if (next==null) {
       Console.WriteLine("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
