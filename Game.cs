@@ -56,7 +56,12 @@ class Game
           Console.WriteLine(" - help  Display a help message");
           break;
         case "interact":
-            Console.WriteLine(context.GetCurrent().GetDilemma());
+            if (context.GetCurrent().GetDilemma().GetDilemmaString().Length > 0) {
+                Console.WriteLine(context.GetCurrent().GetDilemma().GetDilemmaString());
+            }
+            else {
+                Console.WriteLine("Nothing to interact with here");
+            }
             break;
         default:
           Console.WriteLine("Woopsie, I don't understand '" + command + "' 😕");

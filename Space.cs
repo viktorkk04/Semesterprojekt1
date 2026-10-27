@@ -4,8 +4,8 @@
 class Space : Node
 {
   private String message = "";
-  private String dilemma = "";
-  public Space(String name, String message, String dilemma) : base(name)
+  private Dilemma dilemma;
+  public Space(String name, String message, Dilemma dilemma) : base(name)
   {
     this.message = message;
     this.dilemma = dilemma;
@@ -36,7 +36,7 @@ class Space : Node
   {
   }
 
-  public string GetDilemma()
+  public Dilemma GetDilemma()
   {
     return this.dilemma;
   }
