@@ -1,33 +1,38 @@
 /* Main class for launching the game
  */
 
-class Game {
-  static World    world    = new World(); 
-  static Context  context  = new Context(world.GetEntry());
-  
-  static void Main (string[] args) { 
+class Game
+{
+  static World world = new World();
+  static Context context = new Context(world.GetEntry());
+
+  static void Main(string[] args)
+  {
     Console.WriteLine("Welcome to the World of Zuul!");
-    
+
     context.GetCurrent().Welcome();
-    
-    while (context.IsDone()==false) { // This is the main gameplay loop
+
+    while (context.IsDone() == false)
+    { // This is the main gameplay loop
       Console.Write("> ");
       string? line = Console.ReadLine(); // Gets input from console and puts them in the line string
-      if (line==null) continue; 
-      
+      if (line == null) continue;
+
       // parse line
       string[] elements = line.Split(" "); //Splits the lane at each Space puts the elements into an array
       string command = elements[0]; //Takes the first index from element and puts it into command
       string[] parameters = GetParameters(elements); // The output of the function is stored in the parameters array. Scroll down for function
-      
-      switch (command) { //Here the command get checked in a switch
+
+      switch (command)
+      { //Here the command get checked in a switch
         case "exit":
         case "quit":
         case "bye":
           context.MakeDone(); //This ends the while loop. See Context.cs
           break;
         case "go":
-          if (parameters.Length!=1) { // This checks if the length of parameters is anything else but 1. That is one value.
+          if (parameters.Length != 1)
+          { // This checks if the length of parameters is anything else but 1. That is one value.
             Console.WriteLine("I don't seem to know where that is 🤔");
             return;
           }
@@ -41,19 +46,21 @@ class Game {
           Console.WriteLine(" - help  Display a help message");
           break;
         default:
-          Console.WriteLine("Woopsie, I don't understand '"+command+"' 😕");
+          Console.WriteLine("Woopsie, I don't understand '" + command + "' 😕");
           break;
       }
     }
     Console.WriteLine("Game Over 😥");
   }
-  
-  private static string[] GetParameters (string[] input) { //This function takes a string array as an input
-    string[] output = new string[input.Length-1]; //A new array is created with one length less than the input array.
-    for (int i=0 ; i<output.Length ; i++) { //This for loop takes the index+1 of the input and puts it into the output.
-      output[i] = input[i+1]; 
+
+  private static string[] GetParameters(string[] input)
+  { //This function takes a string array as an input
+    string[] output = new string[input.Length - 1]; //A new array is created with one length less than the input array.
+    for (int i = 0; i < output.Length; i++)
+    { //This for loop takes the index+1 of the input and puts it into the output.
+      output[i] = input[i + 1];
     }
     return output; //The output is then returned.
   }
 } //So if we pass in an array that is {go, north} we then create an array with one less length {0} and put in the second value of the input.
-// The output is then {north}
+  // The output is then {north}
