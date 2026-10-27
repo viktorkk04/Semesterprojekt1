@@ -14,10 +14,10 @@ class World
     Space service = new Space("Public service");
     Space festival = new Space("Local Festival");
     Space shelter = new Space("Homeless Shelter");
-    Space sport = new Space("Local Associations");
-    Space company = new Space("Private Company");
-    Space farm = new Space("Local Farm");
-    Space construction = new Space("Construction Site");
+    Space sport = new Space("Local Associations", "Welcome to the Local Associations! We're all very excited to host you!");
+    Space company = new Space("Private Company", "Welcome to the Private Company! Do you want to get down to buisness?");
+    Space farm = new Space("Local Farm", "Welcome to the Local Farm! Would you like some of my produce? Could give you a great discount... for an exchange in services...");
+    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Could you give us a hand?");
     Space bank = new Space("Bank");
     Space billionaire = new Space("Local Billionaire");
     Space lawyer = new Space("Law Firm");
