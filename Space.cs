@@ -3,7 +3,14 @@
 
 class Space : Node
 {
-  private String message;
+  private String message = "";
+  private String dilemma = "";
+  public Space(String name, String message, String dilemma) : base(name)
+  {
+    this.message = message;
+    this.dilemma = dilemma;
+  }
+
   public Space(String name, String message) : base(name)
   {
     this.message = message;
@@ -27,6 +34,11 @@ class Space : Node
 
   public void Goodbye()
   {
+  }
+
+  public string GetDilemma()
+  {
+    return this.dilemma;
   }
 
   public override Space FollowEdge(string direction)
