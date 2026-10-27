@@ -8,16 +8,16 @@ class World
   public World()
   {
     Space square = new Space("Town Square");
-    Space community = new Space("Community");
-    Space industrial = new Space("Industrial");
-    Space finance = new Space("Finance");
+    Space community = new Space("Community Neighborhood");
+    Space industrial = new Space("Industrial Area");
+    Space finance = new Space("Finance Square");
     Space service = new Space("Public service");
     Space festival = new Space("Local Festival");
     Space shelter = new Space("Homeless Shelter");
     Space sport = new Space("Local Associations");
     Space company = new Space("Private Company");
     Space farm = new Space("Local Farm");
-    Space construction = new Space("Construction");
+    Space construction = new Space("Construction Site");
     Space bank = new Space("Bank");
     Space billionaire = new Space("Local Billionaire");
     Space lawyer = new Space("Law Firm");
