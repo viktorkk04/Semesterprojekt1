@@ -18,6 +18,8 @@ class Game
     Score score = new Score(0, 0, 0);
     Player player = new Player(name, score);
 
+    Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
+
     context.GetCurrent().Welcome();
 
     while (context.IsDone() == false)
