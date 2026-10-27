@@ -55,6 +55,9 @@ class Game
           Console.WriteLine(" - go    Follow an exit");
           Console.WriteLine(" - help  Display a help message");
           break;
+        case "interact":
+            Console.WriteLine(context.GetCurrent().GetDilemma());
+            break;
         default:
           Console.WriteLine("Woopsie, I don't understand '" + command + "' 😕");
           break;
