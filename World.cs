@@ -7,7 +7,7 @@ class World
 
   public World()
   {
-    Space square = new Space("Town Square");
+    Space square = new Space("Town Square", "You are now in the middle of the city");
     Space community = new Space("Community Neighborhood");
     Space industrial = new Space("Industrial Area");
     Space finance = new Space("Finance Square");
