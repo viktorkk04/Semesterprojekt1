@@ -10,6 +10,14 @@ class Game
   {
     Console.WriteLine("Welcome to the World of Zuul!");
 
+    // Player Creation
+    Console.WriteLine("What is your name?");
+    Console.Write("> ");
+    string? name = Console.ReadLine();
+
+    Score score = new Score(0, 0, 0);
+    Player player = new Player(name, score);
+
     context.GetCurrent().Welcome();
 
     while (context.IsDone() == false)
