@@ -2,12 +2,19 @@
  */
 
 class Space : Node {
+    private String message;
+  public Space (String name, String message) : base(name)
+  {
+      this.message = message;
+  }
+
   public Space (String name) : base(name)
   {
   }
   
   public void Welcome () {
     Console.WriteLine("You are now at "+name);
+    Console.WriteLine(message);
     HashSet<string> exits = edges.Keys.ToHashSet();
     Console.WriteLine("Current exits are:");
     foreach (String exit in exits) {
