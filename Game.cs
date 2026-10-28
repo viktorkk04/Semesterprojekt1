@@ -51,11 +51,12 @@ class Game
           context.Transition(parameters[0]); // This passes the parameter value into context.Transition.
           break;
         case "help":
-          Console.WriteLine(" - exit  Exit the program");
-          Console.WriteLine(" - quit  Exit the program");
-          Console.WriteLine(" - bye   Exit the program");
-          Console.WriteLine(" - go    Follow an exit");
-          Console.WriteLine(" - help  Display a help message");
+          Console.WriteLine(" - exit        Exit the program");
+          Console.WriteLine(" - quit        Exit the program");
+          Console.WriteLine(" - bye         Exit the program");
+          Console.WriteLine(" - go          Follow an exit");
+          Console.WriteLine(" - interact    Interact with a room");
+          Console.WriteLine(" - help        Display a help message");
           break;
         case "interact":
         try{
