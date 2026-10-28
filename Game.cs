@@ -20,6 +20,7 @@ class Game
     Player player = new Player(name, score);
 
     Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
+    Console.WriteLine("Write help to display a help message");
     Console.Write("\nPress a button to continue >");
     Console.ReadKey();
     context.GetCurrent().Welcome();
