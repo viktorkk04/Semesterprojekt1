@@ -22,6 +22,7 @@ class Space : Node
 
   public void Welcome()
   {
+    Console.Clear();
     Console.WriteLine("You are now at " + name);
     Console.WriteLine(message);
     HashSet<string> exits = edges.Keys.ToHashSet();

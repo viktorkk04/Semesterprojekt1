@@ -14,14 +14,21 @@ class Context {
   }
   
   public void Transition (string direction) { // This is the transition function
-    Space next = current.FollowEdge(direction);
-    if (next==null) {
-      Console.WriteLine("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
-    } else {
-      current.Goodbye();
-      current = next;
-      current.Welcome();
+    try {
+        Space next = current.FollowEdge(direction);
+
+        if (next==null) {
+          Console.WriteLine("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
+        } else {
+          current.Goodbye();
+          current = next;
+          current.Welcome();
+        }
+    } catch (KeyNotFoundException e) {
+        Console.WriteLine("That direction does not exist");
     }
+      
+
   }
   
   public void MakeDone () {

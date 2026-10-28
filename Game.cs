@@ -8,6 +8,7 @@ class Game
 
   static void Main(string[] args)
   {
+    Console.Clear();
     Console.WriteLine("Welcome to the World of Zuul!");
 
     // Player Creation
@@ -19,7 +20,8 @@ class Game
     Player player = new Player(name, score);
 
     Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
-
+    Console.Write("\nPress a button to continue >");
+    Console.ReadKey();
     context.GetCurrent().Welcome();
 
     while (context.IsDone() == false)
@@ -44,7 +46,7 @@ class Game
           if (parameters.Length != 1)
           { // This checks if the length of parameters is anything else but 1. That is one value.
             Console.WriteLine("I don't seem to know where that is 🤔");
-            return;
+            continue;
           }
           context.Transition(parameters[0]); // This passes the parameter value into context.Transition.
           break;
