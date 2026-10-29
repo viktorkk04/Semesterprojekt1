@@ -21,12 +21,17 @@ public class Score {
         return this._power;
     }
 
-    public void CalculateScore(Score score) {
-        this._corruption = score.GetCorruption();
-        this._popularity = score.GetPopularity();
-        this._power = score.GetPower();
+    public void AddPower(int power) {
+        this._power += power;
     }
 
+    public void AddPopularity(int popularity) {
+        this._popularity += popularity;
+    }
+    
+    public void AddCorruption(int corruption) {
+        this._corruption += corruption;
+    }
     public override string ToString() {
         return $"Power = {this.GetPower()}, Corruption = {this.GetCorruption()}, Popularity = {this.GetPopularity()}";
     }

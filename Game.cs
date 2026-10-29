@@ -79,7 +79,8 @@ class Game
                 
                 if (input == 'y') {
                     CurrentDilemma.AcceptDilemma();
-                    context.NewDay(world);
+                    player.CalculateScore(CurrentDilemma.GetScore());
+                    context.NewDay(world,player);
                     dealDone = true;
                 } else if (input == 'n') {
                     dealDone = true;

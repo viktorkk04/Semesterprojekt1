@@ -45,10 +45,11 @@ class Context {
     return done;
   }
 
-  public void NewDay (World world) {
+  public void NewDay (World world,Player player) {
       daysLeft--;
       current = world.GetEntry();
       current.Welcome();
       current.NewDay(this.GetDaysLeft());
+      Console.WriteLine(player.GetScore());
   }
 }
