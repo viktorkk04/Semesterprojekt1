@@ -61,9 +61,16 @@ class Game
           break;
         case "interact":
         try{
-            foreach (String message in context.GetCurrent().GetDilemma().GetDilemmaList() ) {
+            Dilemma CurrentDilemma = context.GetCurrent().GetDilemma();
+            if (CurrentDilemma.GetIsAccepted()) {
+                Console.WriteLine("This dilemma has already been accepted!");
+                break;
+            }
+            
+            
+            foreach (String message in CurrentDilemma.GetDilemmaList() ) {
                 Console.WriteLine(message);
-                Console.ReadKey();
+                Console.ReadKey(intercept: true);
             }
             Console.WriteLine("Will you accept this deal. Press (y/n):");
             bool dealDone = false;
@@ -71,6 +78,7 @@ class Game
                 char input = Console.ReadKey(intercept: true).KeyChar;
                 
                 if (input == 'y') {
+                    CurrentDilemma.AcceptDilemma();
                     context.NewDay(world);
                     dealDone = true;
                 } else if (input == 'n') {
