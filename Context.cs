@@ -10,6 +10,10 @@ class Context {
     current = node;
     this.daysLeft = days;
   }
+
+  public int GetDaysLeft() {
+      return this.daysLeft;
+  }
   
   public Space GetCurrent() {
     return current;
@@ -45,5 +49,6 @@ class Context {
       daysLeft--;
       current = world.GetEntry();
       current.Welcome();
+      current.NewDay(this.GetDaysLeft());
   }
 }
