@@ -4,7 +4,7 @@
 class Game
 {
   static World world = new World();
-  static Context context = new Context(world.GetEntry());
+  static Context context = new Context(world.GetEntry(), 5);
 
   static void Main(string[] args)
   {
@@ -13,7 +13,7 @@ class Game
 
     // Player Creation
     Console.WriteLine("What is your name?");
-    Console.Write("> ");
+    Console.Write("\n> ");
     string? name = Console.ReadLine();
 
     Score score = new Score(0, 0, 0);
@@ -61,7 +61,25 @@ class Game
           break;
         case "interact":
         try{
-            Console.WriteLine(context.GetCurrent().GetDilemma().GetDilemmaString());
+            foreach (String message in context.GetCurrent().GetDilemma().GetDilemmaList() ) {
+                Console.WriteLine(message);
+                Console.ReadKey();
+            }
+            Console.WriteLine("Will you accept this deal. Press (y/n):");
+            bool dealDone = false;
+            while (!dealDone) {
+                char input = Console.ReadKey(intercept: true).KeyChar;
+                
+                if (input == 'y') {
+                    context.NewDay(world);
+                    dealDone = true;
+                } else if (input == 'n') {
+                    dealDone = true;
+                } else {
+                    continue;
+                }
+                
+            }
         } catch (NullReferenceException){
             Console.WriteLine("Nothing to interact with here");
         }

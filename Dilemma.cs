@@ -1,15 +1,15 @@
 class Dilemma
 {
-    private string dilemma = "";
+    private List<string> dilemma = new List<string>();
     private Score score;
     
-    public Dilemma(String dilemma, Score score)
+    public Dilemma(List<string> dilemma, Score score)
     {
         this.dilemma = dilemma;
         this.score = score;
     }
 
-    public string GetDilemmaString(){
+    public List<string> GetDilemmaList(){
         return this.dilemma;
     }
     public Score GetScore() {

@@ -4,9 +4,11 @@
 class Context {
   Space current;
   bool done = false;
+  int daysLeft;
   
-  public Context (Space node) {
+  public Context (Space node, int days) {
     current = node;
+    this.daysLeft = days;
   }
   
   public Space GetCurrent() {
@@ -37,5 +39,11 @@ class Context {
   
   public bool IsDone () {
     return done;
+  }
+
+  public void NewDay (World world) {
+      daysLeft--;
+      current = world.GetEntry();
+      current.Welcome();
   }
 }
