@@ -92,12 +92,8 @@ class World
     lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
 
     
-<<<<<<< HEAD
-    Space square = new Space("Town Square", "You are now in the middle of the city", new Dilemma(schoolDilemma, new Score (100,10,10)));
-=======
     
     Space square = new Space("Town Square", "You are now in the middle of the city");
->>>>>>> main
     Space community = new Space("Community Neighborhood");
     Space industrial = new Space("Industrial Area");
     Space finance = new Space("Finance Square");
