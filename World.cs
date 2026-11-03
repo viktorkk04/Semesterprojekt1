@@ -56,14 +56,12 @@ class World
     constructionDilemma.Add("Construction Foreman: Could you use your influence to reduce the scrutiny of the forthcoming inspection?");
     
     List<string> farmDilemma = new List<string>();
-    farmDilemma.Add("Farm Owner: Good to see you. Business has been tough lately. I could use some help getting my produce into the town's schools.");
-    farmDilemma.Add(player.GetName() + ": Don't they already have a supplier?");
-    farmDilemma.Add("Farm Owner: They do, but contracts come up for renewal soon. A recommendation from the right person could make a difference.");
-    farmDilemma.Add(player.GetName() + ": And what would I get in return?");
-    farmDilemma.Add("Farm Owner: Let's just say you'd never have to pay for vegetables again. A small favor for a local farmer.");
-    farmDilemma.Add(player.GetName() + ": So you'd rather have connections decide than the best offer?");
-    farmDilemma.Add("Farm Owner: Business is business. Sometimes you need a little help.");
-    farmDilemma.Add("Farm Owner: Will you use your influence to help me get the contract?");
+    farmDilemma.Add("Farm Owner: Hello! I need your help! Could you assist me with reducing the cost of producing my goods?");
+    farmDilemma.Add(player.GetName() + ": How would I do that?");
+    farmDilemma.Add("Farm Owner: You could reduce some legislation on farming. Then I could use more pesticides in my produce!");
+    farmDilemma.Add(player.GetName() + ": But aren't you the supplier for the local school?");
+    farmDilemma.Add("Farm Owner:  Yes, but I NEED the money! Please! I will make a personal delivery every week with free items from my farm...");
+    farmDilemma.Add("Farm Owner: Will you use your influence, and reduce legislation to help me?");
     
     List<string> companyDilemma = new List<string>();
     companyDilemma.Add("Company Manager: Hey, I need a favor. We're bidding on a municipal contract, and a good word from someone in the city would really help.");
