@@ -46,13 +46,13 @@ class Context {
 
   public void NewDay (World world, Player player) {
       daysLeft--;
-      if (daysLeft == 0) {
-          Console.Clear();
-          world.GameOver();
-          MakeDone();
-      } else if (player.GetScore().GetCorruption() == 100) {
+      if (player.GetScore().GetCorruption() == 100) {
           Console.Clear();
           world.PrisonGameOver();
+          MakeDone();
+      } else if (daysLeft == 0) {
+          Console.Clear();
+          world.GameOver();
           MakeDone();
       } else {
           current = world.GetEntry();
