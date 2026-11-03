@@ -33,6 +33,6 @@ public class Score {
         this._corruption += corruption;
     }
     public override string ToString() {
-        return $"Power = {this.GetPower()}, Corruption = {this.GetCorruption()}, Popularity = {this.GetPopularity()}";
+        return $"Corruption = {this.GetCorruption()}, Popularity = {this.GetPopularity()}, Power = {this.GetPower()}";
     }
 }

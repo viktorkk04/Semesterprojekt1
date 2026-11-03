@@ -98,23 +98,23 @@ class World
 
     
     
-    Space square = new Space("Town Square", "You are now in the middle of the city", new Dilemma(schoolDilemma, new Score (10,10,10)));
+    Space square = new Space("Town Square", "You are now in the middle of the city");
     Space community = new Space("Community Neighborhood");
     Space industrial = new Space("Industrial Area");
     Space finance = new Space("Finance Square");
     Space service = new Space("Public service");
-    Space festival = new Space("Local Festival","", new Dilemma(festivalDilemma, new Score (10,10,10)));
-    Space shelter = new Space("Homeless Shelter","", new Dilemma(shelterDilemma, new Score (10,10,10)));
-    Space sport = new Space("Local Associations", "Welcome to the Local Associations! We're all very excited to host you!" , new Dilemma(sportDilemma, new Score (10,10,10)));
-    Space company = new Space("Private Company", "Welcome to the Private Company! Do you want to get down to buisness?", new Dilemma(companyDilemma, new Score (10,10,10)));
-    Space farm = new Space("Local Farm", "Welcome to the Local Farm! Would you like some of my produce? Could give you a great discount... for an exchange in services...", new Dilemma(farmDilemma, new Score (10,10,10)));
-    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Could you give us a hand?", new Dilemma(constructionDilemma, new Score (10,10,10)));
-    Space bank = new Space("Bank","", new Dilemma(bankDilemma, new Score (10,10,10)));
-    Space billionaire = new Space("Local Billionaire","", new Dilemma(billionaireDilemma, new Score (10,10,10)));
-    Space lawyer = new Space("Law Firm", "",new Dilemma(lawyerDilemma, new Score (10,10,10)));
-    Space hospital = new Space("Hospital", "",new Dilemma(hospitalDilemma, new Score (10,10,10)));
-    Space nursing = new Space("Nursing Home","", new Dilemma(nursingDilemma, new Score (10,10,10)));
-    Space school = new Space("School","", new Dilemma(schoolDilemma, new Score (10,10,10)));
+    Space festival = new Space("Local Festival","", new Dilemma(festivalDilemma, new Score (0,20,10)));
+    Space shelter = new Space("Homeless Shelter","", new Dilemma(shelterDilemma, new Score (0,15,10)));
+    Space sport = new Space("Local Associations", "Welcome to the Local Associations! We're all very excited to host you!" , new Dilemma(sportDilemma, new Score (0,20,0)));
+    Space company = new Space("Private Company", "Welcome to the Private Company! Do you want to get down to buisness?", new Dilemma(companyDilemma, new Score (15,-5,15)));
+    Space farm = new Space("Local Farm", "Welcome to the Local Farm! Would you like some of my produce? Could give you a great discount... for an exchange in services...", new Dilemma(farmDilemma, new Score (15,-10,0)));
+    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Could you give us a hand?", new Dilemma(constructionDilemma, new Score (30,-10,10)));
+    Space bank = new Space("Bank","", new Dilemma(bankDilemma, new Score (35,-15,10)));
+    Space billionaire = new Space("Local Billionaire","", new Dilemma(billionaireDilemma, new Score (30,-20,15)));
+    Space lawyer = new Space("Law Firm", "",new Dilemma(lawyerDilemma, new Score (30,-20,15)));
+    Space hospital = new Space("Hospital", "",new Dilemma(hospitalDilemma, new Score (0,20,10)));
+    Space nursing = new Space("Nursing Home","", new Dilemma(nursingDilemma, new Score (0,15,10)));
+    Space school = new Space("School","", new Dilemma(schoolDilemma, new Score (0,10,5)));
 
     //edge from square
     square.AddEdge("north", industrial);
