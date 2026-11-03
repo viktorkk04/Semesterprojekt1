@@ -25,6 +25,7 @@ class Space : Node
     Console.Clear();
     Console.WriteLine("You are now at " + name);
     Console.WriteLine(message);
+    Console.WriteLine();
     HashSet<string> exits = edges.Keys.ToHashSet();
     Console.WriteLine("Current exits are:");
     foreach (String exit in exits)
@@ -34,8 +35,10 @@ class Space : Node
   }
 
   public void NewDay(int daysLeft) {
-      Console.WriteLine($"It is now a new day. There are {daysLeft} left until the election");
+      Console.WriteLine();
+      Console.WriteLine($"It is now a new day. There are {daysLeft} days left until the election");
       Console.WriteLine("Go explore the city again!");
+      Console.WriteLine();
   }
 
   public void Goodbye()

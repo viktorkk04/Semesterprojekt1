@@ -26,7 +26,7 @@ class Context {
                 current.Goodbye();
                 current = next;
                 current.Welcome();
-                Console.WriteLine("This room has a dilemma. Write \"interact\" to interact with the dilemma.");
+                Console.WriteLine("\nThis room has a dilemma. Write \"interact\" to interact with the dilemma.");
             }
         } catch (NullReferenceException) {
           current.Goodbye();
@@ -58,7 +58,8 @@ class Context {
           current = world.GetEntry();
           current.Welcome();
           current.NewDay(this.GetDaysLeft());
-          Console.WriteLine($"Corruption = {player.GetScore().GetCorruption()} ({score.GetCorruption()}), Popularity = {player.GetScore().GetPopularity()} ({score.GetPopularity()}), Power = {player.GetScore().GetPopularity()} ({score.GetPopularity()})");
+          Console.WriteLine("This is your updated status:");
+          Console.WriteLine($"Corruption = {player.GetScore().GetCorruption()} ({score.GetCorruption()}), Popularity = {player.GetScore().GetPopularity()} ({score.GetPopularity()}), Power = {player.GetScore().GetPower()} ({score.GetPower()})");
       }
   }
 }

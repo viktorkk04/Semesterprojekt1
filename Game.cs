@@ -18,7 +18,18 @@ class Game
     // Player Creation
     Console.WriteLine("What is your name?");
     Console.Write("\n> ");
-    string? name = Console.ReadLine();
+    bool nameCreation = false;
+    string name = "";
+    while (!nameCreation) {
+        string input = Console.ReadLine();
+        if (input == "") {
+            Console.Write("> ");
+            continue;
+        } else {
+            nameCreation = true;
+            name = input;
+        }
+    }
 
     Score score = new Score(0, 0, 0);
     Player player = new Player(name, score);
@@ -53,7 +64,7 @@ class Game
         case "go":
           if (parameters.Length != 1)
           { // This checks if the length of parameters is anything else but 1. That is one value.
-            Console.WriteLine("I don't seem to know where that is 🤔");
+            Console.WriteLine("I don't seem to know where that is");
             continue;
           }
           context.Transition(parameters[0]); // This passes the parameter value into context.Transition.
@@ -74,7 +85,9 @@ class Game
                 Console.WriteLine("This dilemma has already been accepted!");
                 break;
             }
-            
+            Console.Clear();
+            Console.WriteLine("Press any key to continue:");
+            Console.WriteLine();
             foreach (String message in CurrentDilemma.GetDilemmaList() ) {
                 Console.WriteLine(message);
                 Console.ReadKey(intercept: true);
@@ -89,7 +102,7 @@ class Game
                     CurrentDilemma.AcceptDilemma();
                     Score newScore = CurrentDilemma.GetScore();
                     player.CalculateScore(newScore);
-                    context.NewDay(world ,player ,newScore);
+                    context.NewDay(world, player, newScore);
                     dealDone = true;
                 } else if (input == 'n') {
                     context.GetCurrent().Welcome();
@@ -107,11 +120,11 @@ class Game
             Console.WriteLine(player.GetScore());
             break;
         default:
-          Console.WriteLine("Woopsie, I don't understand '" + command + "' 😕");
+          Console.WriteLine("Woopsie, I don't understand '" + command + "'");
           break;
       }
     }
-    Console.WriteLine("Game Over 😥");
+    Console.WriteLine("Game Over!");
   }
 
   private static string[] GetParameters(string[] input)
