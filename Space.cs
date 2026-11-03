@@ -34,7 +34,8 @@ class Space : Node
   }
 
   public void NewDay(int daysLeft) {
-      Console.WriteLine($"It is now a new day. There are {daysLeft} left");
+      Console.WriteLine($"It is now a new day. There are {daysLeft} left until the election");
+      Console.WriteLine("Go explore the city again!");
   }
 
   public void Goodbye()
