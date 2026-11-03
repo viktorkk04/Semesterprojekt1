@@ -44,7 +44,7 @@ class Context {
   
   public bool IsDone () { return done; }
 
-  public void NewDay (World world, Player player) {
+  public void NewDay (World world, Player player, Score score) {
       daysLeft--;
       if (player.GetScore().GetCorruption() == 100) {
           Console.Clear();
@@ -58,7 +58,7 @@ class Context {
           current = world.GetEntry();
           current.Welcome();
           current.NewDay(this.GetDaysLeft());
-          Console.WriteLine(player.GetScore());
+          Console.WriteLine($"Corruption = {player.GetScore().GetCorruption()} ({score.GetCorruption()}), Popularity = {player.GetScore().GetPopularity()} ({score.GetPopularity()}), Power = {player.GetScore().GetPopularity()} ({score.GetPopularity()})");
       }
   }
 }
