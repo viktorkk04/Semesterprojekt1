@@ -89,6 +89,7 @@ class Game
                     context.NewDay(world,player);
                     dealDone = true;
                 } else if (input == 'n') {
+                    context.GetCurrent().Welcome();
                     Console.WriteLine("You chose no. Go explore other options in the city");
                     dealDone = true;
                 } else {
