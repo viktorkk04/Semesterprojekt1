@@ -4,7 +4,7 @@
 class Game
 {
   static World world = new World();
-  static Context context = new Context(world.GetEntry());
+  static Context context = new Context(world.GetEntry(), 5);
 
   static void Main(string[] args)
   {
@@ -13,13 +13,14 @@ class Game
 
     // Player Creation
     Console.WriteLine("What is your name?");
-    Console.Write("> ");
+    Console.Write("\n> ");
     string? name = Console.ReadLine();
 
     Score score = new Score(0, 0, 0);
     Player player = new Player(name, score);
 
     Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
+    Console.WriteLine("Write help to display a help message");
     Console.Write("\nPress a button to continue >");
     Console.ReadKey();
     context.GetCurrent().Welcome();
@@ -51,16 +52,42 @@ class Game
           context.Transition(parameters[0]); // This passes the parameter value into context.Transition.
           break;
         case "help":
-          Console.WriteLine(" - exit  Exit the program");
-          Console.WriteLine(" - quit  Exit the program");
-          Console.WriteLine(" - bye   Exit the program");
-          Console.WriteLine(" - go    Follow an exit");
-          Console.WriteLine(" - help  Display a help message");
+          Console.WriteLine(" - exit        Exit the program");
+          Console.WriteLine(" - quit        Exit the program");
+          Console.WriteLine(" - bye         Exit the program");
+          Console.WriteLine(" - go          Follow an exit");
+          Console.WriteLine(" - interact    Interact with a room");
+          Console.WriteLine(" - help        Display a help message");
           break;
         case "interact":
         try{
-            if (context.GetCurrent().GetDilemma().GetDilemmaString().Length > 0) {
-                Console.WriteLine(context.GetCurrent().GetDilemma().GetDilemmaString());
+            Dilemma CurrentDilemma = context.GetCurrent().GetDilemma();
+            if (CurrentDilemma.GetIsAccepted()) {
+                Console.WriteLine("This dilemma has already been accepted!");
+                break;
+            }
+            
+            
+            foreach (String message in CurrentDilemma.GetDilemmaList() ) {
+                Console.WriteLine(message);
+                Console.ReadKey(intercept: true);
+            }
+            Console.WriteLine("Will you accept this deal. Press (y/n):");
+            bool dealDone = false;
+            while (!dealDone) {
+                char input = Console.ReadKey(intercept: true).KeyChar;
+                
+                if (input == 'y') {
+                    CurrentDilemma.AcceptDilemma();
+                    player.CalculateScore(CurrentDilemma.GetScore());
+                    context.NewDay(world,player);
+                    dealDone = true;
+                } else if (input == 'n') {
+                    dealDone = true;
+                } else {
+                    continue;
+                }
+                
             }
         } catch (NullReferenceException){
             Console.WriteLine("Nothing to interact with here");

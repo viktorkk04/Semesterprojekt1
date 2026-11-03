@@ -1,18 +1,27 @@
 class Dilemma
 {
-    private string dilemma = "";
+    private List<string> dilemma = new List<string>();
     private Score score;
+    bool isAccepted = false;
     
-    public Dilemma(String dilemma, Score score)
+    public Dilemma(List<string> dilemma, Score score)
     {
         this.dilemma = dilemma;
         this.score = score;
     }
 
-    public string GetDilemmaString(){
+    public List<string> GetDilemmaList(){
         return this.dilemma;
     }
     public Score GetScore() {
         return this.score;
+    }
+
+    public void AcceptDilemma(){
+        isAccepted = true;
+    }
+
+    public bool GetIsAccepted() {
+        return isAccepted;
     }
 }

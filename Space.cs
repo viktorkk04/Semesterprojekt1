@@ -33,6 +33,10 @@ class Space : Node
     }
   }
 
+  public void NewDay(int daysLeft) {
+      Console.WriteLine($"It is now a new day. There are {daysLeft} left");
+  }
+
   public void Goodbye()
   {
   }
