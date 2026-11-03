@@ -39,7 +39,7 @@ class Game
 
       // parse line
       string[] elements = line.Split(" "); //Splits the lane at each Space puts the elements into an array
-      string command = elements[0]; //Takes the first index from element and puts it into command
+      string command = elements[0].ToLower(); //Takes the first index from element and puts it into command
       string[] parameters = GetParameters(elements); // The output of the function is stored in the parameters array. Scroll down for function
 
       switch (command)
@@ -112,7 +112,7 @@ class Game
     string[] output = new string[input.Length - 1]; //A new array is created with one length less than the input array.
     for (int i = 0; i < output.Length; i++)
     { //This for loop takes the index+1 of the input and puts it into the output.
-      output[i] = input[i + 1];
+      output[i] = input[i + 1].ToLower();
     }
     return output; //The output is then returned.
   }
