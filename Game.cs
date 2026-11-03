@@ -9,8 +9,11 @@ class Game
   static void Main(string[] args)
   {
     Console.Clear();
-    Console.WriteLine("Welcome to the World of Zuul!");
-
+    Console.WriteLine("Welcome to Svendborg!"); 
+    Console.WriteLine("You're a up-and-coming politician, trying to establish himself in the community before the election, which is set to take place in 6 days."); 
+    Console.WriteLine("Your goal is to walk around the town, and accept different dilemmas which can impact how your voters see you."); 
+    Console.WriteLine("You can accept 1 dilemma each day, while accumulating a score which impacts your results.");
+    Console.WriteLine();
     // Player Creation
     Console.WriteLine("What is your name?");
     Console.Write("\n> ");
