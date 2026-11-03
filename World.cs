@@ -12,23 +12,23 @@ class World
   {
       this.player = player; 
     List<string> schoolDilemma = new List<string>();
-    schoolDilemma.Add("Principal: Hello there, "+ player.GetName() +" Sorry to bother you but we have a school meeting at the hall today and maybe you could participate ");
+    schoolDilemma.Add("Principal: Hello there "+ player.GetName() +", Sorry to bother you but we have a school meeting at the hall today and maybe you could participate ");
     schoolDilemma.Add(player.GetName() + ": And what were you thinking should do ");
     schoolDilemma.Add("Principal: If you just had some inspirational words to motivate the young people, that will be all we need from you. What do you say?");
    
     List<string> nursingDilemma = new List<string>();
-    nursingDilemma.Add(player.GetName() + " Hello everyone, looks cosy in here ");
+    nursingDilemma.Add(player.GetName() + ": Hello everyone, looks cosy in here ");
     nursingDilemma.Add("Staff: didn't expect you here " + player.GetName() + ". What can we do for you ");
     nursingDilemma.Add(player.GetName() + ": Just walking around the city and looking for people who needs some help");
     nursingDilemma.Add("Staff: Actually, you can help serve lunch for the elderly. Don't know if you would like to help with that? ");
     
     List<string> hospitalDilemma = new List<string>();
     hospitalDilemma.Add("Staff: Hello "+ player.GetName() +", what a surprise to see you here. in the wards. Are you out checking up on the local healthcare? ");
-    hospitalDilemma.Add(player.GetName() + "Just walking around and enjoying the city, before the election.");
+    hospitalDilemma.Add(player.GetName() + ": Just walking around and enjoying the city, before the election.");
     hospitalDilemma.Add("Staff: I know you properly are very busy, but do you have a couple minuts to help us. We are a bit short-handed in the children's section today. If you could read a short story for them it would help us alot? Will you do that for us? ");
     
     List<string> festivalDilemma = new List<string>();
-    festivalDilemma.Add("Festival organizer: Oh MR." + player.GetName() + " am i glad to see you. ");
+    festivalDilemma.Add("Festival organizer: Oh MR. " + player.GetName() + " am i glad to see you. ");
     festivalDilemma.Add(player.GetName() + ": always a pleasure, I was just in the neighborhood and thought i would swing by to see how the progress is going with the festival. ");
     festivalDilemma.Add("Festival organizer: Well " + player.GetName() + ", we are trying to get accessibility ramps throughout the festival, but it will put us over the budget. ");
     festivalDilemma.Add(player.GetName() + ": ohh Im so sorry to hear, is there anything i could do. ");
@@ -37,15 +37,15 @@ class World
     
     List<string> shelterDilemma = new List<string>();
     shelterDilemma.Add("Staff: Oh, hello " + player.GetName() + ". We didn't expect you to drop by the shelter today. What brings you here? ");
-    shelterDilemma.Add(player.GetName() + "Just walking around the city and looking for people who needs some help.");
+    shelterDilemma.Add(player.GetName() + ": Just walking around the city and looking for people who needs some help.");
     shelterDilemma.Add("Staff: To be honest, we just received a big donation of warm winter clothes, but we lack hands to sort them out to the residents. Would you be willing to help us with that? ");
     
     
     List<string> sportDilemma = new List<string>();
     sportDilemma.Add("Club Volunteer: Hey, we're short on volunteers for Saturday's youth tournament. Could you give us a hand?");
-    sportDilemma.Add(player.GetName() + "I've got other things to do. What's in it for me? ");
+    sportDilemma.Add(player.GetName() + ": I've got other things to do. What's in it for me? ");
     sportDilemma.Add("Club Volunteer: Not much, honestly. The club runs on volunteers. The more people help out, the more activities we can offer the kids.");
-    sportDilemma.Add(player.GetName() + "So I'd just be helping the community?");
+    sportDilemma.Add(player.GetName() + ": So I'd just be helping the community?");
     sportDilemma.Add("Club Volunteer: Exactly. A few hours of your time means dozens of children get a great day of sports.");
     sportDilemma.Add("Club Volunteer: Can you help us, and volunteer at the tournament? ");
     
@@ -55,17 +55,17 @@ class World
     constructionDilemma.Add("Construction Foreman: Maybe. But delays cost money. If the inspector doesn't look too closely, the project stays on schedule.");
     constructionDilemma.Add(player.GetName() + ": And what do you want from me?");
     constructionDilemma.Add("Construction Foreman: Put in a good word. Convince them there's no need for a thorough inspection. You may even get a penthouse apartment. Who knows?");
-    constructionDilemma.Add(player.GetName() + "  Even if the site isn't fully compliant?");
+    constructionDilemma.Add(player.GetName() + ": Even if the site isn't fully compliant?");
     constructionDilemma.Add("Construction Foreman: It'll be fixed eventually. Why hold up the whole project over a few minor details?");
     constructionDilemma.Add("Construction Foreman: Could you use your influence to reduce the scrutiny of the forthcoming inspection?");
     
     List<string> farmDilemma = new List<string>();
     farmDilemma.Add("Farm Owner: Good to see you. Business has been tough lately. I could use some help getting my produce into the town's schools.");
-    farmDilemma.Add(player.GetName() + "Don't they already have a supplier?");
+    farmDilemma.Add(player.GetName() + ": Don't they already have a supplier?");
     farmDilemma.Add("Farm Owner: They do, but contracts come up for renewal soon. A recommendation from the right person could make a difference.");
-    farmDilemma.Add(player.GetName() + "And what would I get in return?");
+    farmDilemma.Add(player.GetName() + ": And what would I get in return?");
     farmDilemma.Add("Farm Owner: Let's just say you'd never have to pay for vegetables again. A small favor for a local farmer.");
-    farmDilemma.Add(player.GetName() + "So you'd rather have connections decide than the best offer?");
+    farmDilemma.Add(player.GetName() + ": So you'd rather have connections decide than the best offer?");
     farmDilemma.Add("Farm Owner: Business is business. Sometimes you need a little help.");
     farmDilemma.Add("Farm Owner: Will you use your influence to help me get the contract?");
     
