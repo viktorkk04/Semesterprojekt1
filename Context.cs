@@ -21,25 +21,44 @@ class Context {
 
         if (next==null) {
           Console.WriteLine("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
-        } else {
+        } try {
+            if (next.GetDilemma().GetDilemmaList().Count() > 0) {
+                current.Goodbye();
+                current = next;
+                current.Welcome();
+                Console.WriteLine("This room has a dilemma. Write \"interact\" to interact with the dilemma.");
+            }
+        } catch (NullReferenceException) {
           current.Goodbye();
           current = next;
           current.Welcome();
         }
-    } catch (KeyNotFoundException e) {
+    } catch (KeyNotFoundException) {
         Console.WriteLine("That direction does not exist");
     }
   }
   
-  public void MakeDone () { done = true; }
+  public void MakeDone () { 
+      done = true; 
+  }
   
   public bool IsDone () { return done; }
 
-  public void NewDay (World world,Player player) {
+  public void NewDay (World world, Player player) {
       daysLeft--;
-      current = world.GetEntry();
-      current.Welcome();
-      current.NewDay(this.GetDaysLeft());
-      Console.WriteLine(player.GetScore());
+      if (daysLeft == 0) {
+          Console.Clear();
+          world.GameOver();
+          MakeDone();
+      } else if (player.GetScore().GetCorruption() == 100) {
+          Console.Clear();
+          world.PrisonGameOver();
+          MakeDone();
+      } else {
+          current = world.GetEntry();
+          current.Welcome();
+          current.NewDay(this.GetDaysLeft());
+          Console.WriteLine(player.GetScore());
+      }
   }
 }

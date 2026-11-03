@@ -4,13 +4,11 @@
 class World
 {
   Space square;
-  
   Player? player;
-  
   
   public World(Player player)
   {
-      this.player = player; 
+    this.player = player; 
     List<string> schoolDilemma = new List<string>();
     schoolDilemma.Add("Principal: Hello there "+ player.GetName() +", Sorry to bother you but we have a school meeting at the hall today and maybe you could participate ");
     schoolDilemma.Add(player.GetName() + ": And what were you thinking should do ");
@@ -34,12 +32,10 @@ class World
     festivalDilemma.Add(player.GetName() + ": ohh Im so sorry to hear, is there anything i could do. ");
     festivalDilemma.Add("Festival organizer: Well the cityhall had always donated to the festival, but this year the money is going to a lunch for you and the other politicians. If maybe you could find it in your heart to get the donation back we could arrange a beautiful lunch here, in the heart of the city and community");
 
-    
     List<string> shelterDilemma = new List<string>();
     shelterDilemma.Add("Staff: Oh, hello " + player.GetName() + ". We didn't expect you to drop by the shelter today. What brings you here? ");
     shelterDilemma.Add(player.GetName() + ": Just walking around the city and looking for people who needs some help.");
     shelterDilemma.Add("Staff: To be honest, we just received a big donation of warm winter clothes, but we lack hands to sort them out to the residents. Would you be willing to help us with that? ");
-    
     
     List<string> sportDilemma = new List<string>();
     sportDilemma.Add("Club Volunteer: Hey, we're short on volunteers for Saturday's youth tournament. Could you give us a hand?");
@@ -82,7 +78,6 @@ class World
     bankDilemma.Add(player.GetName() + ": Well, no one would give the new town politician that amount of money, so I sound like you want something in return. ");
     bankDilemma.Add("Bank Manager: you are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. ");
     
-    
     List<string> billionaireDilemma = new List<string>();
     billionaireDilemma.Add("Billionaire: I thought my mind was playing a trick with me, Mr. "+ player.GetName()+ ", what are you doing here. ");
     billionaireDilemma.Add(player.GetName() +": oh just making my way around the city making some connections before the election, you know, helping the people i serve. ");
@@ -97,8 +92,7 @@ class World
     lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
 
     
-    
-    Space square = new Space("Town Square", "You are now in the middle of the city", new Dilemma(schoolDilemma, new Score (10,10,10)));
+    Space square = new Space("Town Square", "You are now in the middle of the city", new Dilemma(schoolDilemma, new Score (100,10,10)));
     Space community = new Space("Community Neighborhood");
     Space industrial = new Space("Industrial Area");
     Space finance = new Space("Finance Square");
@@ -163,7 +157,6 @@ class World
     lawyer.AddEdge("back", finance);
 
 
-
     this.square = square;
   }
 
@@ -176,6 +169,17 @@ class World
   {
      this.player = player;
   }
-  
-}
 
+  public void GameOver() {
+      Console.WriteLine("The game is now over");
+      Console.WriteLine($"The election has now over and your final score based upon your choices is {player.GetScore()}");
+      Console.WriteLine("This score has had an influence in the results of your election");
+      Console.WriteLine("Influences here");
+  }
+
+  public void PrisonGameOver() {
+      Console.WriteLine("You have reached 100% corruption");
+      Console.WriteLine("The police has begun an investigation and you have been put into custody");
+      Console.WriteLine("You will face a judge soon where your sentence will be decided");
+  }
+}

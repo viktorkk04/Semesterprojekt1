@@ -13,6 +13,7 @@ class Game
     Console.WriteLine("You're a up-and-coming politician, trying to establish himself in the community before the election, which is set to take place in 6 days."); 
     Console.WriteLine("Your goal is to walk around the town, and accept different dilemmas which can impact how your voters see you."); 
     Console.WriteLine("You can accept 1 dilemma each day, while accumulating a score which impacts your results.");
+    Console.WriteLine("You need 40% popularity to get elected for office. Be careful that you do not reach 100% corruption");
     Console.WriteLine();
     // Player Creation
     Console.WriteLine("What is your name?");
@@ -23,7 +24,7 @@ class Game
     Player player = new Player(name, score);
 
     world = new World(player);
-    context = new Context(world.GetEntry(), 5);
+    context = new Context(world.GetEntry(), 2);
 
     Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
     Console.WriteLine("Write help to display a help message");
@@ -63,6 +64,7 @@ class Game
           Console.WriteLine(" - bye         Exit the program");
           Console.WriteLine(" - go          Follow an exit");
           Console.WriteLine(" - interact    Interact with a room");
+          Console.WriteLine(" - status      To see your status");
           Console.WriteLine(" - help        Display a help message");
           break;
         case "interact":
@@ -99,6 +101,9 @@ class Game
         } catch (NullReferenceException){
             Console.WriteLine("Nothing to interact with here");
         }
+            break;
+        case "status" :
+            Console.WriteLine(player.GetScore());
             break;
         default:
           Console.WriteLine("Woopsie, I don't understand '" + command + "' 😕");
