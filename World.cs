@@ -179,8 +179,8 @@ class World
       // Hvis poplaritet er over 40% bliver du valgt.
       // 
       // Hvis magt er under 25% er dit parti lille og du får ikke godkendt så meget
-      // hvis magt er mellem 25 og 75 er dit parti mellemstort og du får godkendt okay meget
-      // hvis magt er over 75 er dit parti det største og i bestemmer alt.
+      // hvis magt er mellem 25 og 50 er dit parti mellemstort og du får godkendt okay meget
+      // hvis magt er over 50 er dit parti det største og i bestemmer alt.
   }
 
   public void PrisonGameOver() {
