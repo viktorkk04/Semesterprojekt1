@@ -11,13 +11,9 @@ class Context {
     this.daysLeft = days;
   }
 
-  public int GetDaysLeft() {
-      return this.daysLeft;
-  }
+  public int GetDaysLeft() { return this.daysLeft; }
   
-  public Space GetCurrent() {
-    return current;
-  }
+  public Space GetCurrent() { return current; }
   
   public void Transition (string direction) { // This is the transition function
     try {
@@ -37,13 +33,9 @@ class Context {
 
   }
   
-  public void MakeDone () {
-    done = true;
-  }
+  public void MakeDone () { done = true; }
   
-  public bool IsDone () {
-    return done;
-  }
+  public bool IsDone () { return done; }
 
   public void NewDay (World world,Player player) {
       daysLeft--;

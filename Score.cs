@@ -9,29 +9,18 @@ public class Score {
         this._power = power;
     }
 
-    public int GetCorruption() {
-        return this._corruption;
-    }
+    public int GetCorruption() { return this._corruption; }
 
-    public int GetPopularity() {
-        return this._popularity;
-    }
+    public int GetPopularity() { return this._popularity; }
 
-    public int GetPower() {
-        return this._power;
-    }
+    public int GetPower() { return this._power; }
 
-    public void AddPower(int power) {
-        this._power += power;
-    }
+    public void AddPower(int power) { this._power += power; }
 
-    public void AddPopularity(int popularity) {
-        this._popularity += popularity;
-    }
+    public void AddPopularity(int popularity) { this._popularity += popularity; }
     
-    public void AddCorruption(int corruption) {
-        this._corruption += corruption;
-    }
+    public void AddCorruption(int corruption) { this._corruption += corruption; }
+
     public override string ToString() {
         return $"Power = {this.GetPower()}, Corruption = {this.GetCorruption()}, Popularity = {this.GetPopularity()}";
     }

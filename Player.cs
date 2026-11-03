@@ -7,16 +7,11 @@ public class Player {
         this._score = score;
     }
 
-    public string GetName() {
-        return this._name;
-    }
+    public string GetName() { return this._name; }
 
-    public Score GetScore() {
-        return this._score;
-    }
-    public void SetScore(Score score){
-        this._score = score;
-    }
+    public Score GetScore() { return this._score; }
+
+    public void SetScore(Score score){ this._score = score; }
 
     public void CalculateScore(Score score) {
         this._score.AddPower(score.GetPower());

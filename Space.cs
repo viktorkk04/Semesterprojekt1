@@ -41,10 +41,7 @@ class Space : Node
   {
   }
 
-  public Dilemma GetDilemma()
-  {
-    return this.dilemma;
-  }
+  public Dilemma GetDilemma() { return this.dilemma; }
 
   public override Space FollowEdge(string direction)
   {

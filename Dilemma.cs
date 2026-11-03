@@ -10,18 +10,11 @@ class Dilemma
         this.score = score;
     }
 
-    public List<string> GetDilemmaList(){
-        return this.dilemma;
-    }
-    public Score GetScore() {
-        return this.score;
-    }
+    public List<string> GetDilemmaList(){ return this.dilemma; }
 
-    public void AcceptDilemma(){
-        isAccepted = true;
-    }
+    public Score GetScore() { return this.score;}
 
-    public bool GetIsAccepted() {
-        return isAccepted;
-    }
+    public void AcceptDilemma(){ isAccepted = true; }
+
+    public bool GetIsAccepted() { return isAccepted; }
 }
