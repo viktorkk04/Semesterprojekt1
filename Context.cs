@@ -29,8 +29,6 @@ class Context {
     } catch (KeyNotFoundException e) {
         Console.WriteLine("That direction does not exist");
     }
-      
-
   }
   
   public void MakeDone () { done = true; }

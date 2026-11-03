@@ -67,12 +67,12 @@ class Game
                 break;
             }
             
-            
             foreach (String message in CurrentDilemma.GetDilemmaList() ) {
                 Console.WriteLine(message);
                 Console.ReadKey(intercept: true);
             }
-            Console.WriteLine("Will you accept this deal. Press (y/n):");
+            
+            Console.WriteLine("Will you accept this deal. Press (y/n) for yes or no:");
             bool dealDone = false;
             while (!dealDone) {
                 char input = Console.ReadKey(intercept: true).KeyChar;
@@ -83,11 +83,11 @@ class Game
                     context.NewDay(world,player);
                     dealDone = true;
                 } else if (input == 'n') {
+                    Console.WriteLine("You chose no. Go explore other options in the city");
                     dealDone = true;
                 } else {
                     continue;
                 }
-                
             }
         } catch (NullReferenceException){
             Console.WriteLine("Nothing to interact with here");
