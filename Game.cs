@@ -13,7 +13,7 @@ class Game
     Console.WriteLine("You're a up-and-coming politician, trying to establish himself in the community before the election, which is set to take place in 5 days."); 
     Console.WriteLine("Your goal is to walk around the town, and accept different dilemmas which can impact how your voters see you."); 
     Console.WriteLine("You can accept 1 dilemma each day, while accumulating a score which impacts your results.");
-    Console.WriteLine("You need 40% popularity to get elected for office. Be careful that you do not reach 100% corruption");
+    Console.WriteLine("You need 40% popularity to get elected for office. Be careful that you do not reach 100% corruption.");
     Console.WriteLine();
     // Player Creation
     Console.WriteLine("What is your name?");
