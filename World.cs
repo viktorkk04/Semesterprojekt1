@@ -171,9 +171,26 @@ class World
 
   public void GameOver() {
       Console.WriteLine("The game is now over");
-      Console.WriteLine($"The election has now over and your final score based upon your choices is {player.GetScore()}");
+      Console.WriteLine($"The electionday has come and the people has voted now, and your final score based upon your choices is {player.GetScore()}");
       Console.WriteLine("This score has had an influence in the results of your election");
-      Console.WriteLine("Influences here");
+      Console.WriteLine("See how your election went here");
+      Console.WriteLine("");
+        if (player.GetScore().GetPopularity() >= 40) {
+            Console.WriteLine("du er stemt ind besked");
+            Console.WriteLine("");
+                if (player.GetScore().GetPower() <25)
+                    Console.WriteLine("du får ik ført noget igennem");
+                else if (player.GetScore().GetPower() >= 25 && player.GetScore().GetPower() <=70)
+                    Console.WriteLine("du har noget magt i byen og få stemt nogle ting gennem");
+                else if (player.GetScore().GetPower() > 70)
+                Console.WriteLine("du har mest magt i byen og får stemt alt igennem");
+        }
+        else {
+            Console.WriteLine("du blev ikke stemt ind besked");
+        }
+        
+            
+            
 
       // Hvis popularitet er til og med 40% bliver man ikke valgt.
       // Hvis popularitet er over 40% bliver du valgt.
