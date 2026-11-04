@@ -174,30 +174,89 @@ class World
       Console.WriteLine($"The electionday has come and the people has voted now, and your final score based upon your choices is {player.GetScore()}");
       Console.WriteLine("This score has had an influence in the results of your election");
       Console.WriteLine("See how your election went here");
-      Console.WriteLine("");
+      Console.WriteLine("Press any key to continue");
+      Console.ReadKey(intercept: true);
+      Console.Clear();
+      Console.WriteLine("The city gathers in the town hall");
+      Console.WriteLine("The ligths flicker as the last votes are being counted");
+      Console.WriteLine("Press any key to continue");
+      Console.ReadKey(intercept: true);
+      Console.Clear();
         if (player.GetScore().GetPopularity() >= 40) {
-            Console.WriteLine("du er stemt ind besked");
-            Console.WriteLine("");
-                if (player.GetScore().GetPower() <25)
-                    Console.WriteLine("du får ik ført noget igennem");
-                else if (player.GetScore().GetPower() >= 25 && player.GetScore().GetPower() <=70)
-                    Console.WriteLine("du har noget magt i byen og få stemt nogle ting gennem");
-                else if (player.GetScore().GetPower() > 70)
-                Console.WriteLine("du har mest magt i byen og får stemt alt igennem");
+            Console.WriteLine("The crowd erupts in applause");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey(intercept: true);
+            Console.Clear();
+            Console.WriteLine("You have been elected!");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey(intercept: true);
+            Console.Clear();
+                if (player.GetScore().GetPower() <25){
+                    Console.WriteLine("But as the weeks pass, you reaize you influence is fragile");
+                    Console.WriteLine("Your proposals are ignored");
+                    Console.WriteLine("Your voice fades in the council chambers");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey(intercept: true);
+                    Console.Clear();
+                    Console.WriteLine("Then it hits you");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey(intercept: true);
+                    Console.Clear();
+                    Console.WriteLine("You might have won the election");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey(intercept: true);
+                    Console.Clear();
+                    Console.WriteLine("But not the power");
+                    }
+                else if (player.GetScore().GetPower() >= 25 && player.GetScore().GetPower() <=70){
+                    Console.WriteLine("Your first months are a mix of victories and defeats");
+                    Console.WriteLine("Some of your ideas pass through the council");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey(intercept: true);
+                    Console.Clear();
+                    Console.WriteLine("Others die quietly in committee rooms");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey(intercept: true);
+                    Console.Clear();
+                    Console.WriteLine("You are respected");
+                    Console.WriteLine("You are heard");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey(intercept: true);
+                    Console.Clear();
+                    Console.WriteLine("But you are not unstoppable");
+                    }
+                else if (player.GetScore().GetPower() > 70){
+                Console.WriteLine("Your influence spreads through the city like wildfire");
+                Console.WriteLine("Council members fall silent when you enter the room");
+                Console.WriteLine("Every proposal you make passes without resistance");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey(intercept: true);
+                Console.Clear();
+                Console.WriteLine("You reshape the city");
+                Console.WriteLine("You define its future");
+                Console.WriteLine("You are the most powerful leader in its history");
+                }
         }
         else {
-            Console.WriteLine("du blev ikke stemt ind besked");
+            Console.WriteLine("As the hall grows quiet, a man is going up to a microphone");
+            Console.WriteLine("With a single sentence he calmly annunces the results");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey(intercept: true);
+            Console.Clear();
+            Console.WriteLine("you were not elected");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey(intercept: true);
+            Console.Clear();
+            Console.WriteLine("People leave the building slowly");
+            Console.WriteLine("Some look at you with sympathy");
+            Console.WriteLine("Others avoid your eyes");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey(intercept: true);
+            Console.Clear();
+            Console.WriteLine("Your journey ends here");
         }
         
             
-            
-
-      // Hvis popularitet er til og med 40% bliver man ikke valgt.
-      // Hvis popularitet er over 40% bliver du valgt.
-      // 
-      // Hvis magt er under 25% er dit parti lille og du får ikke godkendt så meget
-      // hvis magt er mellem 25 og 70 er dit parti mellemstort og du får godkendt okay meget
-      // hvis magt er over 70 er dit parti det største og i bestemmer alt.
   }
 
   public void PrisonGameOver() {
