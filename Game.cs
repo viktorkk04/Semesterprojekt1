@@ -127,6 +127,7 @@ class Game
           break;
       }
     }
+    Console.WriteLine("");
     Console.WriteLine("Game Over!");
   }
 
