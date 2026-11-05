@@ -30,7 +30,6 @@ class Game
             name = input;
         }
     }
-
     Score score = new Score(0, 0, 0);
     Player player = new Player(name, score);
 
@@ -118,6 +117,10 @@ class Game
             break;
         case "status" :
             Console.WriteLine(player.GetScore());
+            break;
+        case "map" :
+            Map map = new Map();
+            
             break;
         default:
           Console.WriteLine("Woopsie, I don't understand '" + command + "'");
