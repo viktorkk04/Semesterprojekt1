@@ -34,7 +34,7 @@ class Game
     Player player = new Player(name, score);
 
     world = new World(player);
-    context = new Context(world.GetEntry(), 5);
+    context = new Context(world.GetEntry(), 1);
 
     Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
     Console.WriteLine("Write help to display a help message");

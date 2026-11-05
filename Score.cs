@@ -41,6 +41,6 @@ public class Score {
     }
 
     public override string ToString() {
-        return $"Corruption = {this.GetCorruption()}, Popularity = {this.GetPopularity()}, Power = {this.GetPower()}";
+        return $"Corruption = {this.GetCorruption()}%, Popularity = {this.GetPopularity()}%, Power = {this.GetPower()}%";
     }
 }
