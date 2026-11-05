@@ -31,9 +31,6 @@ class Map{
         var currentPos = map[pos.GetName()];
         int posX = currentPos.X;
         int posY = currentPos.Y;
-
-        Console.WriteLine(posX);
-        Console.WriteLine(posY);
         
         while(mapDone == false){
             
