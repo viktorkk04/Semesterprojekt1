@@ -74,6 +74,7 @@ class Game
           Console.WriteLine(" - bye         Exit the program");
           Console.WriteLine(" - go          Follow an exit");
           Console.WriteLine(" - interact    Interact with a room");
+          Console.WriteLine(" - map         Diaplay map and current location");
           Console.WriteLine(" - status      To see your status");
           Console.WriteLine(" - help        Display a help message");
           break;
@@ -119,7 +120,7 @@ class Game
             Console.WriteLine(player.GetScore());
             break;
         case "map" :
-            Map map = new Map();
+            Map map = new Map(context.GetCurrent());
             
             break;
         default:
