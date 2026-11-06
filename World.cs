@@ -90,24 +90,23 @@ class World
     lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
 
     
-    
     Space square = new Space("Town Square", "You are now in the middle of the city");
-    Space community = new Space("Community Neighborhood");
-    Space industrial = new Space("Industrial Area");
-    Space finance = new Space("Finance Square");
-    Space service = new Space("Public service");
+    Space community = new Space("Community Neighborhood", "This is where you find all the local communities");
+    Space industrial = new Space("Industrial Area", "This is where you find the industrial companies");
+    Space finance = new Space("Finance Square", "This is where you find the financial companies");
+    Space service = new Space("Public service", "This where you find the public service");
     Space festival = new Space("Local Festival","", new Dilemma(festivalDilemma, new Score (0,20,15)));
     Space shelter = new Space("Homeless Shelter","", new Dilemma(shelterDilemma, new Score (0,15,15)));
     Space sport = new Space("Local Associations", "Welcome to the Local Associations! We're all very excited to host you!" , new Dilemma(sportDilemma, new Score (0,20,5)));
-    Space company = new Space("Private Company", "Welcome to the Private Company! Do you want to get down to buisness?", new Dilemma(companyDilemma, new Score (15,-5,20)));
-    Space farm = new Space("Local Farm", "Welcome to the Local Farm! Would you like some of my produce? Could give you a great discount... for an exchange in services...", new Dilemma(farmDilemma, new Score (15,-10,5)));
-    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Could you give us a hand?", new Dilemma(constructionDilemma, new Score (30,-10,15)));
-    Space bank = new Space("Bank","", new Dilemma(bankDilemma, new Score (35,-15,15)));
-    Space billionaire = new Space("Local Billionaire","", new Dilemma(billionaireDilemma, new Score (30,-20,20)));
-    Space lawyer = new Space("Law Firm", "",new Dilemma(lawyerDilemma, new Score (30,-20,20)));
-    Space hospital = new Space("Hospital", "",new Dilemma(hospitalDilemma, new Score (0,20,15)));
-    Space nursing = new Space("Nursing Home","", new Dilemma(nursingDilemma, new Score (0,15,15)));
-    Space school = new Space("School","", new Dilemma(schoolDilemma, new Score (0,10,10)));
+    Space company = new Space("Private Company", "Welcome to the Private Company! Do you want to get down to business?", new Dilemma(companyDilemma, new Score (15,-5,20)));
+    Space farm = new Space("Local Farm", "Welcome to the Local Farm! Fresh produce for sale!", new Dilemma(farmDilemma, new Score (15,-10,5)));
+    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Watch out for heavy stuff!", new Dilemma(constructionDilemma, new Score (30,-10,15)));
+    Space bank = new Space("Bank","Welcome to the bank!", new Dilemma(bankDilemma, new Score (35,-15,15)));
+    Space billionaire = new Space("Local Billionaire","The billionaire greets you!", new Dilemma(billionaireDilemma, new Score (30,-20,20)));
+    Space lawyer = new Space("Law Firm", "Welcome to the law firm! All inquiries are welcome!",new Dilemma(lawyerDilemma, new Score (30,-20,20)));
+    Space hospital = new Space("Hospital", "Welcome to the hospital! Hope you stay healthy!",new Dilemma(hospitalDilemma, new Score (0,20,15)));
+    Space nursing = new Space("Nursing Home","Welcome to the nursing home! The elderly enjoys their time here", new Dilemma(nursingDilemma, new Score (0,15,15)));
+    Space school = new Space("School","Welcome to the school! Children greet you at the door!", new Dilemma(schoolDilemma, new Score (0,10,10)));
 
     //edge from square
     square.AddEdge("north", industrial);
@@ -171,39 +170,39 @@ class World
 
   public void GameOver() {
       Console.WriteLine("The game is now over");
-      Console.WriteLine($"The electionday has come and the people has voted now, and your final score based upon your choices is {player.GetScore()}");
+      Console.WriteLine($"The electionday has come and the people has now voted, and your final score based upon your choices is {player.GetScore()}");
       Console.WriteLine("This score has had an influence in the results of your election");
       Console.WriteLine("See how your election went here");
-      Console.WriteLine("Press any key to continue");
+      Console.Write("\nPress any key to continue:");
       Console.ReadKey(intercept: true);
       Console.Clear();
       Console.WriteLine("The city gathers in the town hall");
       Console.WriteLine("The ligths flicker as the last votes are being counted");
-      Console.WriteLine("Press any key to continue");
+      Console.Write("\nPress any key to continue:");
       Console.ReadKey(intercept: true);
       Console.Clear();
         if (player.GetScore().GetPopularity() >= 40) {
             Console.WriteLine("The crowd erupts in applause");
-            Console.WriteLine("Press any key to continue");
+            Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
             Console.WriteLine("You have been elected!");
-            Console.WriteLine("Press any key to continue");
+            Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
                 if (player.GetScore().GetPower() <25){
                     Console.WriteLine("But as the weeks pass, you reaize you influence is fragile");
                     Console.WriteLine("Your proposals are ignored");
                     Console.WriteLine("Your voice fades in the council chambers");
-                    Console.WriteLine("Press any key to continue");
+                    Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("Then it hits you");
-                    Console.WriteLine("Press any key to continue");
+                    Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("You might have won the election");
-                    Console.WriteLine("Press any key to continue");
+                    Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("But not the power");
@@ -211,16 +210,16 @@ class World
                 else if (player.GetScore().GetPower() >= 25 && player.GetScore().GetPower() <=70){
                     Console.WriteLine("Your first months are a mix of victories and defeats");
                     Console.WriteLine("Some of your ideas pass through the council");
-                    Console.WriteLine("Press any key to continue");
+                    Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("Others die quietly in committee rooms");
-                    Console.WriteLine("Press any key to continue");
+                    Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("You are respected");
                     Console.WriteLine("You are heard");
-                    Console.WriteLine("Press any key to continue");
+                    Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("But you are not unstoppable");
@@ -229,7 +228,7 @@ class World
                 Console.WriteLine("Your influence spreads through the city like wildfire");
                 Console.WriteLine("Council members fall silent when you enter the room");
                 Console.WriteLine("Every proposal you make passes without resistance");
-                Console.WriteLine("Press any key to continue");
+                Console.Write("\nPress any key to continue:");
                 Console.ReadKey(intercept: true);
                 Console.Clear();
                 Console.WriteLine("You reshape the city");
@@ -240,23 +239,21 @@ class World
         else {
             Console.WriteLine("As the hall grows quiet, a man is going up to a microphone");
             Console.WriteLine("With a single sentence he calmly annunces the results");
-            Console.WriteLine("Press any key to continue");
+            Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
             Console.WriteLine("you were not elected");
-            Console.WriteLine("Press any key to continue");
+            Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
             Console.WriteLine("People leave the building slowly");
             Console.WriteLine("Some look at you with sympathy");
             Console.WriteLine("Others avoid your eyes");
-            Console.WriteLine("Press any key to continue");
+            Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
             Console.WriteLine("Your journey ends here");
         }
-        
-            
   }
 
   public void PrisonGameOver() {

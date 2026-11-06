@@ -55,11 +55,15 @@ class Context {
           world.GameOver();
           MakeDone();
       } else {
+          Console.Clear();
           current = world.GetEntry();
-          current.Welcome();
           current.NewDay(this.GetDaysLeft());
-          Console.WriteLine("This is your updated status:");
+          Console.WriteLine("This is your updated status based upon the nature of the deal:");
           Console.WriteLine($"Corruption = {player.GetScore().GetCorruption()} ({score.GetCorruption()}), Popularity = {player.GetScore().GetPopularity()} ({score.GetPopularity()}), Power = {player.GetScore().GetPower()} ({score.GetPower()})");
+          Console.Write("\nPress any key to continue:");
+          Console.ReadKey(intercept: true);
+          Console.Clear();
+          current.Welcome();
       }
   }
 }

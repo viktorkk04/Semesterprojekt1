@@ -5,6 +5,7 @@ class Space : Node
 {
   private String message = "";
   private Dilemma dilemma;
+  
   public Space(String name, String message, Dilemma dilemma) : base(name)
   {
     this.message = message;
@@ -32,6 +33,7 @@ class Space : Node
     {
       Console.WriteLine(" - " + exit);
     }
+    Console.WriteLine("Write go before an exit to follow its path");
   }
 
   public void NewDay(int daysLeft) {
