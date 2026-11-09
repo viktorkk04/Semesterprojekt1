@@ -18,5 +18,4 @@ public class Player {
         this._score.AddCorruption(score.GetCorruption());
         this._score.AddPopularity(score.GetPopularity());
     }
-
 }
