@@ -57,8 +57,8 @@ class Map{
             for (int x = 0; x < location[y]; x++){
                 if (x > 0) {
                     if (location[y] == 5) {
-                        int nuværendeGap = (x == 1 || x == 4) ? gapValue : gapValue2;
-                        Console.Write(new string(' ', nuværendeGap));
+                        int currentGap = (x == 1 || x == 4) ? gapValue : gapValue2;
+                        Console.Write(new string(' ', currentGap));
                     } else {
                         Console.Write(new string(' ', gapValue));
                     }
@@ -76,8 +76,8 @@ class Map{
             for (int x = 0; x < location[y]; x++){
                 if (x > 0) {
                     if (location[y] == 5) {
-                        int nuværendeGap = (x == 1 || x == 4) ? gapValue : gapValue2;
-                        Console.Write(new string(' ', nuværendeGap));
+                        int currentGap = (x == 1 || x == 4) ? gapValue : gapValue2;
+                        Console.Write(new string(' ', currentGap));
                     } else {
                         Console.Write(new string(' ', gapValue));
                     }
