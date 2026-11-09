@@ -17,10 +17,6 @@ class Space : Node
     this.message = message;
   }
 
-  public Space(String name) : base(name)
-  {
-  }
-
   public void Welcome()
   {
     Console.Clear();
@@ -36,15 +32,11 @@ class Space : Node
     Console.WriteLine("Write go before an exit to follow its path");
   }
 
-  public void NewDay(int daysLeft) {
+  public void NewDayMessage(int daysLeft) {
       Console.WriteLine();
       Console.WriteLine($"It is now a new day. There are {daysLeft} days left until the election");
       Console.WriteLine("Go explore the city again!");
       Console.WriteLine();
-  }
-
-  public void Goodbye()
-  {
   }
 
   public Dilemma GetDilemma() { return this.dilemma; }

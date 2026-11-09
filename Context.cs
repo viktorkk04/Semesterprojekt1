@@ -23,13 +23,11 @@ class Context {
           Console.WriteLine("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
         } try {
             if (next.GetDilemma().GetDilemmaList().Count() > 0) {
-                current.Goodbye();
                 current = next;
                 current.Welcome();
                 Console.WriteLine("\nThis room has a dilemma. Write \"interact\" to interact with the dilemma.");
             }
         } catch (NullReferenceException) {
-          current.Goodbye();
           current = next;
           current.Welcome();
         }
@@ -57,7 +55,7 @@ class Context {
       } else {
           Console.Clear();
           current = world.GetEntry();
-          current.NewDay(this.GetDaysLeft());
+          current.NewDayMessage(this.GetDaysLeft());
           Console.WriteLine("This is your updated status based upon the nature of the deal:");
           Console.WriteLine($"Corruption = {player.GetScore().GetCorruption()} ({score.GetCorruption()}), Popularity = {player.GetScore().GetPopularity()} ({score.GetPopularity()}), Power = {player.GetScore().GetPower()} ({score.GetPower()})");
           Console.Write("\nPress any key to continue:");
