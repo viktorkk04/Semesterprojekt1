@@ -191,7 +191,7 @@ class World
             Console.ReadKey(intercept: true);
             Console.Clear();
                 if (player.GetScore().GetPower() <25){
-                    Console.WriteLine("But as the weeks pass, you reaize you influence is fragile");
+                    Console.WriteLine("But as the weeks pass, you realise you influence is fragile");
                     Console.WriteLine("Your proposals are ignored");
                     Console.WriteLine("Your voice fades in the council chambers");
                     Console.Write("\nPress any key to continue:");
@@ -201,11 +201,11 @@ class World
                     Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
-                    Console.WriteLine("You might have won the election");
+                    Console.WriteLine("You might have been elected");
                     Console.Write("\nPress any key to continue:");
                     Console.ReadKey(intercept: true);
                     Console.Clear();
-                    Console.WriteLine("But not the power");
+                    Console.WriteLine("But your power is not great enough to have the influence you want");
                     }
                 else if (player.GetScore().GetPower() >= 25 && player.GetScore().GetPower() <=70){
                     Console.WriteLine("Your first months are a mix of victories and defeats");
@@ -223,6 +223,7 @@ class World
                     Console.ReadKey(intercept: true);
                     Console.Clear();
                     Console.WriteLine("But you are not unstoppable");
+                    Console.WriteLine("Your power can only do so much");
                     }
                 else if (player.GetScore().GetPower() > 70){
                 Console.WriteLine("Your influence spreads through the city like wildfire");
@@ -242,7 +243,7 @@ class World
             Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
-            Console.WriteLine("you were not elected");
+            Console.WriteLine("You were not elected");
             Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
