@@ -116,8 +116,8 @@ class World
 
     //egde from industrial to room
     industrial.AddEdge("north", farm);
-    industrial.AddEdge("east", company);
-    industrial.AddEdge("west", construction);
+    industrial.AddEdge("east", construction);
+    industrial.AddEdge("west", company);
     industrial.AddEdge("south", square);
     //edge from room to industrial
     company.AddEdge("back", industrial);
@@ -190,7 +190,7 @@ class World
             Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
             Console.Clear();
-                if (player.GetScore().GetPower() <25){
+                if (player.GetScore().GetPower() < 45){
                     Console.WriteLine("But as the weeks pass, you realise you influence is fragile");
                     Console.WriteLine("Your proposals are ignored");
                     Console.WriteLine("Your voice fades in the council chambers");
@@ -207,7 +207,7 @@ class World
                     Console.Clear();
                     Console.WriteLine("But your power is not great enough to have the influence you want");
                     }
-                else if (player.GetScore().GetPower() >= 25 && player.GetScore().GetPower() <=70){
+                else if (player.GetScore().GetPower() >= 45 && player.GetScore().GetPower() <=70){
                     Console.WriteLine("Your first months are a mix of victories and defeats");
                     Console.WriteLine("Some of your ideas pass through the council");
                     Console.Write("\nPress any key to continue:");
