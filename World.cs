@@ -95,17 +95,17 @@ class World
     Space industrial = new Space("Industrial Area", "You look around.\nTo the north you see a huge farm.\nTo the west you see a big company.\nTo the east you see a construction site.\nThe south leads back to the town square.");
     Space finance = new Space("Finance Square", "You look around.\nTo the north you see a bank.\nTo the west you see the mansion of a billionaire.\nTo the south you see a lawyer firm.\nThe east leads back to the town square.");
     Space service = new Space("Public service", "You look around.\nTo the west you see a hospital.\nTo the south you see a nursing home.\nTo the east you see a public school.\nThe north leads back to the town square.");
-    Space festival = new Space("Local Festival","Welcome to the Local Festival", new Dilemma(festivalDilemma, new Score (0,20,15)));
-    Space shelter = new Space("Homeless Shelter","Welcome to the Homeless Shelter", new Dilemma(shelterDilemma, new Score (0,15,15)));
+    Space festival = new Space("Local Festival","Welcome to the Local Festival", new Dilemma(festivalDilemma, new Score (0,20,5)));
+    Space shelter = new Space("Homeless Shelter","Welcome to the Homeless Shelter", new Dilemma(shelterDilemma, new Score (0,15,0)));
     Space sport = new Space("Local Associations", "Welcome to the Local Associations! We're all very excited to host you!" , new Dilemma(sportDilemma, new Score (0,20,5)));
     Space company = new Space("Private Company", "Welcome to the Private Company! Do you want to get down to business?", new Dilemma(companyDilemma, new Score (15,-5,20)));
     Space farm = new Space("Local Farm", "Welcome to the Local Farm! Fresh produce for sale!", new Dilemma(farmDilemma, new Score (15,-10,5)));
-    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Watch out for heavy stuff!", new Dilemma(constructionDilemma, new Score (30,-10,15)));
+    Space construction = new Space("Construction Site", "Welcome to the Construction Site! Watch out for heavy stuff!", new Dilemma(constructionDilemma, new Score (30,-10,10)));
     Space bank = new Space("Bank","Welcome to the bank!", new Dilemma(bankDilemma, new Score (35,-15,15)));
     Space billionaire = new Space("Local Billionaire","The billionaire greets you!", new Dilemma(billionaireDilemma, new Score (30,-20,20)));
     Space lawyer = new Space("Law Firm", "Welcome to the law firm! All inquiries are welcome!",new Dilemma(lawyerDilemma, new Score (30,-20,20)));
-    Space hospital = new Space("Hospital", "Welcome to the hospital! Hope you stay healthy!",new Dilemma(hospitalDilemma, new Score (0,20,15)));
-    Space nursing = new Space("Nursing Home","Welcome to the nursing home! The elderly enjoys their time here", new Dilemma(nursingDilemma, new Score (0,15,15)));
+    Space hospital = new Space("Hospital", "Welcome to the hospital! Hope you stay healthy!",new Dilemma(hospitalDilemma, new Score (0,20,10)));
+    Space nursing = new Space("Nursing Home","Welcome to the nursing home! The elderly enjoys their time here", new Dilemma(nursingDilemma, new Score (0,15,10)));
     Space school = new Space("School","Welcome to the school! Children greet you at the door!", new Dilemma(schoolDilemma, new Score (0,10,10)));
 
     //edge from square
