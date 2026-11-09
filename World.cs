@@ -90,11 +90,11 @@ class World
     lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
 
     
-    Space square = new Space("Town Square", "You are now in the middle of the city");
-    Space community = new Space("Community Neighborhood", "This is where you find all the local communities");
-    Space industrial = new Space("Industrial Area", "This is where you find the industrial companies");
-    Space finance = new Space("Finance Square", "This is where you find the financial companies");
-    Space service = new Space("Public service", "This where you find the public service");
+    Space square = new Space("Town Square", "You are now in the middle of the city.\nGo explore!");
+    Space community = new Space("Community Neighborhood", "You look around.\nTo the north you see a local association.\nTo the east you see a homeless shelter.\nTo the south you see a local festival.\nThe west leads back to the town square.");
+    Space industrial = new Space("Industrial Area", "You look around.\nTo the north you see a huge farm.\nTo the west you see a big company.\nTo the east you see a construction site.\nThe south leads back to the town square.");
+    Space finance = new Space("Finance Square", "You look around.\nTo the north you see a bank.\nTo the west you see the mansion of a billionaire.\nTo the south you see a lawyer firm.\nThe east leads back to the town square.");
+    Space service = new Space("Public service", "You look around.\nTo the west you see a hospital.\nTo the south you see a nursing home.\nTo the east you see a public school.\nThe north leads back to the town square.");
     Space festival = new Space("Local Festival","", new Dilemma(festivalDilemma, new Score (0,20,15)));
     Space shelter = new Space("Homeless Shelter","", new Dilemma(shelterDilemma, new Score (0,15,15)));
     Space sport = new Space("Local Associations", "Welcome to the Local Associations! We're all very excited to host you!" , new Dilemma(sportDilemma, new Score (0,20,5)));
@@ -111,44 +111,44 @@ class World
     //edge from square
     square.AddEdge("north", industrial);
     square.AddEdge("east", community);
-    square.AddEdge("south", service);
     square.AddEdge("west", finance);
+    square.AddEdge("south", service);
 
     //egde from industrial to room
-    industrial.AddEdge("company", company);
-    industrial.AddEdge("farm", farm);
-    industrial.AddEdge("construction", construction);
-    industrial.AddEdge("back", square);
+    industrial.AddEdge("north", farm);
+    industrial.AddEdge("east", company);
+    industrial.AddEdge("west", construction);
+    industrial.AddEdge("south", square);
     //edge from room to industrial
     company.AddEdge("back", industrial);
     farm.AddEdge("back", industrial);
     construction.AddEdge("back", industrial);
 
     //edge from community to room
-    community.AddEdge("sport", sport);
-    community.AddEdge("shelter", shelter);
-    community.AddEdge("festival", festival);
-    community.AddEdge("back", square);
+    community.AddEdge("north", sport);
+    community.AddEdge("east", shelter);
+    community.AddEdge("south", festival);
+    community.AddEdge("west", square);
     //edge from room to community
     sport.AddEdge("back", community);
     shelter.AddEdge("back", community);
     festival.AddEdge("back", community);
 
     //edge from service to room
-    service.AddEdge("school", school);
-    service.AddEdge("nursing", nursing);
-    service.AddEdge("hospital", hospital);
-    service.AddEdge("back", square);
+    service.AddEdge("west", hospital);
+    service.AddEdge("south", nursing);
+    service.AddEdge("east", school);
+    service.AddEdge("north", square);
     //edge from room to service
     school.AddEdge("back", service);
     nursing.AddEdge("back", service);
     hospital.AddEdge("back", service);
 
     //edge from finance to room
-    finance.AddEdge("bank", bank);
-    finance.AddEdge("billionaire", billionaire);
-    finance.AddEdge("lawyer", lawyer);
-    finance.AddEdge("back", square);
+    finance.AddEdge("north", bank);
+    finance.AddEdge("west", billionaire);
+    finance.AddEdge("south", lawyer);
+    finance.AddEdge("east", square);
     //edge from room to finance
     bank.AddEdge("back", finance);
     billionaire.AddEdge("back", finance);
