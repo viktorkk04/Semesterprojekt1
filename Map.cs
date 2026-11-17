@@ -13,9 +13,9 @@ class Map{
     public Map(Space pos)
     {        
         map.Add("Local Farm", (0, 0));
-        map.Add("Construction Site", (0, 1));
+        map.Add("Construction Site", (2, 1));
         map.Add("Industrial Area", (1, 1));
-        map.Add("Private Company", (2, 1));
+        map.Add("Private Company", (0, 1));
         map.Add("Bank", (0, 2));
         map.Add("Local Associations", (1, 2));
         map.Add("Local Billionaire", (0, 3));
