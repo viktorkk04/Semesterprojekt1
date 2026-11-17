@@ -73,18 +73,18 @@ class World
     
     List<string> bankDilemma = new List<string>();
     bankDilemma.Add("Bank manager: Well hello there " + player.GetName() + ", i have a proposal for you. Theoretically, what would you say if I could give you access to a secret account with 500.000 dkk as a campaign contribution. ");
-    bankDilemma.Add(player.GetName() + ": Well, no one would give the new town politician that amount of money, so I sound like you want something in return. ");
+    bankDilemma.Add(player.GetName() + ": Well, no one would give the new town politician that amount of money, so it sounds like you want something in return. ");
     bankDilemma.Add("Bank Manager: you are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. ");
     
     List<string> billionaireDilemma = new List<string>();
-    billionaireDilemma.Add("Billionaire: I thought my mind was playing a trick with me, Mr. "+ player.GetName()+ ", what are you doing here. ");
+    billionaireDilemma.Add("Billionaire: I thought my mind was playing a trick on me, Mr. "+ player.GetName()+ ", what are you doing here. ");
     billionaireDilemma.Add(player.GetName() +": oh just making my way around the city making some connections before the election, you know, helping the people i serve. ");
-    billionaireDilemma.Add("Bilionaire: well am i glad you said that. You see, I'm in a bit of a pickle. I've been planning to build a small get-away cabin in the woods like a vacation house, but close to home.  ");
+    billionaireDilemma.Add("Bilionaire: Well am i glad you said that. You see, I'm in a bit of a pickle. I've been planning to build a small get-away cabin in the woods like a vacation house, but close to home.  ");
     billionaireDilemma.Add(player.GetName() +": Sounds amazing, it would certainly increase the interest newcomers would have in the city. ");
     billionaireDilemma.Add("Bilionaire: Well, there is just one small problem. I want to build it in the forest but someone a long time ago decided it was a protected property forest so i can't build it there. Let's just say that if the forest is no longer protected, you might find a cabin with your name on the mailbox. ");
     
     List<string> lawyerDilemma = new List<string>();
-    lawyerDilemma.Add("Lawyer: Welcome MR. "+ player.GetName() +" what brings you to my humble offices");
+    lawyerDilemma.Add("Lawyer: Welcome Mr. "+ player.GetName() +" what brings you to my humble offices");
     lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. ");
     lawyerDilemma.Add("Lawyer: Well we want to, you know to give something more to the city, but we run into a problem. You see prosecuting everyone for everything takes a lot of associates and space. ");
     lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
@@ -181,7 +181,7 @@ class World
       Console.Write("\nPress any key to continue:");
       Console.ReadKey(intercept: true);
       Console.Clear();
-        if (player.GetScore().GetPopularity() >= 40) {
+        if (player.GetScore().GetPopularity() >= 60) {
             Console.WriteLine("The crowd erupts in applause");
             Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);

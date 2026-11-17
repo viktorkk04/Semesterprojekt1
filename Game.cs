@@ -14,7 +14,7 @@ class Game
     Console.WriteLine("You're a up-and-coming politician, trying to establish himself in the community before the election, which is set to take place in 5 days."); 
     Console.WriteLine("Your goal is to walk around the town, and accept different dilemmas which can impact how your voters see you."); 
     Console.WriteLine("You can accept 1 dilemma each day, while accumulating a score which impacts your results.");
-    Console.WriteLine("You need 40% popularity to get elected for office. Be careful that you do not reach 100% corruption.");
+    Console.WriteLine("You need 60% popularity to get elected for office. Be careful that you do not reach 100% corruption.");
     Console.WriteLine();
     
     // Player Creation and world creation
@@ -32,7 +32,7 @@ class Game
             name = input;
         }
     }
-    Score score = new Score(0, 0, 0);
+    Score score = new Score(0, 30, 0);
     Player player = new Player(name, score);
 
     world = new World(player);
@@ -41,7 +41,7 @@ class Game
     Console.Clear();
     Console.WriteLine($"Hello {player.GetName()}. These are your stats: {player.GetScore()}");
     Console.WriteLine("Write help to display a help message");
-    Console.Write("\nPress a button to continue >");
+    Console.Write("\nPress a button to start you campaign >");
     Console.ReadKey();
     context.GetCurrent().Welcome();
 
@@ -149,5 +149,4 @@ class Game
     }
     return output; //The output is then returned.
   }
-} //So if we pass in an array that is {go, north} we then create an array with one less length {0} and put in the second value of the input.
-  // The output is then {north}
+}
