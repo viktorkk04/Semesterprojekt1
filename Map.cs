@@ -1,9 +1,11 @@
 class Map{
+    string[] emoji = {"🌽", "🏭","🦺", "💼", "🏦", "⚽", "🤑", "📈", "🏢", "🏡","🍲","📜", "🎡", "🏥","🤝","🏫", "👵"};
     int[] location = {1,3,2,5,2,3,1,0};
     Dictionary<string, (int X, int Y)> map = new Dictionary<string, (int X, int Y)>();
 
     bool mapDone = false;
     int y = 0;
+    int number = 0;
 
     int startValue = 28; 
     int gapValue = 0;    
@@ -66,8 +68,11 @@ class Map{
                 if (x == posX && y == posY){
                     Console.Write("|  X  |");
                 }else{
-                    Console.Write("|     |");
+                    Console.Write("| ");
+                    Console.Write(emoji[number]);
+                    Console.Write("  |");
                 }
+                number++;
             }
             Console.WriteLine("");
     

@@ -116,8 +116,8 @@ class World
 
     //egde from industrial to room
     industrial.AddEdge("north", farm);
-    industrial.AddEdge("east", construction);
-    industrial.AddEdge("west", company);
+    industrial.AddEdge("west", construction);
+    industrial.AddEdge("east", company);
     industrial.AddEdge("south", square);
     //edge from room to industrial
     company.AddEdge("back", industrial);
