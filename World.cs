@@ -26,11 +26,11 @@ class World
     hospitalDilemma.Add("Staff: I know you properly are very busy, but do you have a couple minuts to help us. We are a bit short-handed in the children's section today. If you could read a short story for them it would help us alot? Will you do that for us? ");
     
     List<string> festivalDilemma = new List<string>();
-    festivalDilemma.Add("Festival organizer: Oh MR. " + player.GetName() + " am i glad to see you. ");
-    festivalDilemma.Add(player.GetName() + ": always a pleasure, I was just in the neighborhood and thought i would swing by to see how the progress is going with the festival. ");
+    festivalDilemma.Add("Festival organizer: Oh MR. " + player.GetName() + ", am i glad to see you. ");
+    festivalDilemma.Add(player.GetName() + ": Always a pleasure, I was just in the neighborhood and thought i would swing by to see how the progress is going with the festival. ");
     festivalDilemma.Add("Festival organizer: Well " + player.GetName() + ", we are trying to get accessibility ramps throughout the festival, but it will put us over the budget. ");
-    festivalDilemma.Add(player.GetName() + ": ohh Im so sorry to hear, is there anything i could do. ");
-    festivalDilemma.Add("Festival organizer: Well the cityhall had always donated to the festival, but this year the money is going to a lunch for you and the other politicians. If maybe you could find it in your heart to get the donation back we could arrange a beautiful lunch here, in the heart of the city and community");
+    festivalDilemma.Add(player.GetName() + ": Ohh Im so sorry to hear, is there anything i could do. ");
+    festivalDilemma.Add("Festival organizer: Well the cityhall had always donated to the festival, but this year the money is going to a lunch for you and the other politicians. If maybe you could find it in your heart to get the donation back we could arrange a beautiful lunch here, in the heart of the city and community.");
 
     List<string> shelterDilemma = new List<string>();
     shelterDilemma.Add("Staff: Oh, hello " + player.GetName() + ". We didn't expect you to drop by the shelter today. What brings you here? ");
@@ -72,22 +72,22 @@ class World
     companyDilemma.Add("Company Manager: Could you help the company secure the contract through your personal connections?");
     
     List<string> bankDilemma = new List<string>();
-    bankDilemma.Add("Bank manager: Well hello there " + player.GetName() + ", i have a proposal for you. Theoretically, what would you say if I could give you access to a secret account with 500.000 dkk as a campaign contribution. ");
+    bankDilemma.Add("Bank manager: Well hello there " + player.GetName() + ", I have a proposal for you. Theoretically, what would you say if I could give you access to a secret account with 500.000 dkk as a campaign contribution. ");
     bankDilemma.Add(player.GetName() + ": Well, no one would give the new town politician that amount of money, so I sound like you want something in return. ");
-    bankDilemma.Add("Bank Manager: you are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. ");
+    bankDilemma.Add("Bank Manager: You are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. ");
     
     List<string> billionaireDilemma = new List<string>();
     billionaireDilemma.Add("Billionaire: I thought my mind was playing a trick with me, Mr. "+ player.GetName()+ ", what are you doing here. ");
-    billionaireDilemma.Add(player.GetName() +": oh just making my way around the city making some connections before the election, you know, helping the people i serve. ");
-    billionaireDilemma.Add("Bilionaire: well am i glad you said that. You see, I'm in a bit of a pickle. I've been planning to build a small get-away cabin in the woods like a vacation house, but close to home.  ");
+    billionaireDilemma.Add(player.GetName() +": Oh just making my way around the city making some connections before the election, you know, helping the people i serve. ");
+    billionaireDilemma.Add("Bilionaire: Well am i glad you said that. You see, I'm in a bit of a pickle. I've been planning to build a small get-away cabin in the woods like a vacation house, but close to home.  ");
     billionaireDilemma.Add(player.GetName() +": Sounds amazing, it would certainly increase the interest newcomers would have in the city. ");
     billionaireDilemma.Add("Bilionaire: Well, there is just one small problem. I want to build it in the forest but someone a long time ago decided it was a protected property forest so i can't build it there. Let's just say that if the forest is no longer protected, you might find a cabin with your name on the mailbox. ");
     
     List<string> lawyerDilemma = new List<string>();
     lawyerDilemma.Add("Lawyer: Welcome MR. "+ player.GetName() +" what brings you to my humble offices");
-    lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. ");
+    lawyerDilemma.Add(player.GetName() +": Oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. ");
     lawyerDilemma.Add("Lawyer: Well we want to, you know to give something more to the city, but we run into a problem. You see prosecuting everyone for everything takes a lot of associates and space. ");
-    lawyerDilemma.Add(player.GetName() +": oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
+    lawyerDilemma.Add(player.GetName() +": Oh i wouldn't say humble, your place is massive, with beautiful offices, do you rent them out, I've been looking around. But if we could get our hands on the bottom floor from the people at rødekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. ");
 
     
     Space square = new Space("Town Square", "You are now in the middle of the city.\nGo explore!");
