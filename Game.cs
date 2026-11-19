@@ -92,7 +92,8 @@ class Game
             Console.WriteLine("Press any key to continue:");
             Console.WriteLine();
             foreach (String message in CurrentDilemma.GetDilemmaList() ) {
-                Console.WriteLine(message);
+                string formattedMessage = message.Replace("{playerName}", player.GetName());
+                Console.WriteLine(formattedMessage);
                 Console.ReadKey(intercept: true);
             }
             
@@ -149,4 +150,8 @@ class Game
     }
     return output; //The output is then returned.
   }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> mariusbranch

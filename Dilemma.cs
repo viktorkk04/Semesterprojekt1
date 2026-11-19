@@ -1,8 +1,8 @@
 class Dilemma
 {
-    private List<string> dilemma = new List<string>();
-    private Score score;
-    bool isAccepted = false;
+    public List<string> dilemma { get; set; } = new List<string>();
+    public Score score { get; set; }
+    bool isAccepted {get; set ;} = false;
     
     public Dilemma(List<string> dilemma, Score score)
     {

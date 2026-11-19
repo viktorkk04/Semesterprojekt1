@@ -1,46 +1,40 @@
 public class Score {
-    private int _corruption;
-    private int _popularity;
-    private int _power;
+    public int corruption { get; private set; }
+    public int popularity { get; private set; }
+    public int power { get; private set; }
 
     public Score (int corruption, int popularity, int power) {
-        this._corruption = corruption;
-        this._popularity = popularity;
-        this._power = power;
+        this.corruption = corruption;
+        this.popularity = popularity;
+        this.power = power;
     }
 
-    public int GetCorruption() { return this._corruption; }
-
-    public int GetPopularity() { return this._popularity; }
-
-    public int GetPower() { return this._power; }
-
     public void AddPower(int power) { 
-        this._power += power;
-        if (this._power > 100) {
-            this._power = 100;
+        this.power += power;
+        if (this.power > 100) {
+            this.power = 100;
         }
     }
 
     public void AddPopularity(int popularity) { 
-        this._popularity += popularity;
-        if (this._popularity > 100 ) {
-            this._popularity = 100;
+        this.popularity += popularity;
+        if (this.popularity > 100 ) {
+            this.popularity = 100;
         }
 
-        if (this._popularity < 0) {
-            this._popularity = 0;
+        if (this.popularity < 0) {
+            this.popularity = 0;
         }
     }
     
     public void AddCorruption(int corruption) { 
-        this._corruption += corruption;
-        if (this._corruption > 100) {
-            this._corruption = 100;
+        this.corruption += corruption;
+        if (this.corruption > 100) {
+            this.corruption = 100;
         }
     }
 
     public override string ToString() {
-        return $"Corruption = {this.GetCorruption()}%, Popularity = {this.GetPopularity()}%, Power = {this.GetPower()}%";
+        return $"Corruption = {this.corruption}%, Popularity = {this.popularity}%, Power = {this.power}%";
     }
 }
