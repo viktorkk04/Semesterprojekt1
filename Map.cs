@@ -1,9 +1,11 @@
 class Map{
+    string[] emoji = {"🌽", "🏭","🦺", "💼", "🏦", "⚽", "🤑", "📈", "🏢", "🏡","🍲","📜", "🎡", "🏥","🤝","🏫", "👵"};
     int[] location = {1,3,2,5,2,3,1,0};
     Dictionary<string, (int X, int Y)> map = new Dictionary<string, (int X, int Y)>();
 
     bool mapDone = false;
     int y = 0;
+    int number = 0;
 
     int startValue = 28; 
     int gapValue = 0;    
@@ -11,9 +13,9 @@ class Map{
     public Map(Space pos)
     {        
         map.Add("Local Farm", (0, 0));
-        map.Add("Construction Site", (0, 1));
+        map.Add("Construction Site", (2, 1));
         map.Add("Industrial Area", (1, 1));
-        map.Add("Private Company", (2, 1));
+        map.Add("Private Company", (0, 1));
         map.Add("Bank", (0, 2));
         map.Add("Local Associations", (1, 2));
         map.Add("Local Billionaire", (0, 3));
@@ -57,8 +59,8 @@ class Map{
             for (int x = 0; x < location[y]; x++){
                 if (x > 0) {
                     if (location[y] == 5) {
-                        int nuværendeGap = (x == 1 || x == 4) ? gapValue : gapValue2;
-                        Console.Write(new string(' ', nuværendeGap));
+                        int currentGap = (x == 1 || x == 4) ? gapValue : gapValue2;
+                        Console.Write(new string(' ', currentGap));
                     } else {
                         Console.Write(new string(' ', gapValue));
                     }
@@ -66,8 +68,11 @@ class Map{
                 if (x == posX && y == posY){
                     Console.Write("|  X  |");
                 }else{
-                    Console.Write("|     |");
+                    Console.Write("| ");
+                    Console.Write(emoji[number]);
+                    Console.Write("  |");
                 }
+                number++;
             }
             Console.WriteLine("");
     
@@ -76,8 +81,8 @@ class Map{
             for (int x = 0; x < location[y]; x++){
                 if (x > 0) {
                     if (location[y] == 5) {
-                        int nuværendeGap = (x == 1 || x == 4) ? gapValue : gapValue2;
-                        Console.Write(new string(' ', nuværendeGap));
+                        int currentGap = (x == 1 || x == 4) ? gapValue : gapValue2;
+                        Console.Write(new string(' ', currentGap));
                     } else {
                         Console.Write(new string(' ', gapValue));
                     }
