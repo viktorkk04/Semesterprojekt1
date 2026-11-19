@@ -92,7 +92,8 @@ class Game
             Console.WriteLine("Press any key to continue:");
             Console.WriteLine();
             foreach (String message in CurrentDilemma.GetDilemmaList() ) {
-                Console.WriteLine(message);
+                string formattedMessage = message.Replace("{playerName}", player.GetName());
+                Console.WriteLine(formattedMessage);
                 Console.ReadKey(intercept: true);
             }
             
@@ -149,5 +150,4 @@ class Game
     }
     return output; //The output is then returned.
   }
-} //So if we pass in an array that is {go, north} we then create an array with one less length {0} and put in the second value of the input.
-  // The output is then {north}
+} 

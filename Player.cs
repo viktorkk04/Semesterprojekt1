@@ -14,8 +14,8 @@ public class Player {
     public void SetScore(Score score){ this._score = score; }
 
     public void CalculateScore(Score score) {
-        this._score.AddPower(score.GetPower());
-        this._score.AddCorruption(score.GetCorruption());
-        this._score.AddPopularity(score.GetPopularity());
+        this._score.AddPower(score.power);
+        this._score.AddCorruption(score.corruption);
+        this._score.AddPopularity(score.popularity);
     }
 }

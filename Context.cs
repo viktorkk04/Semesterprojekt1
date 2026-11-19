@@ -44,7 +44,7 @@ class Context {
 
   public void NewDay (World world, Player player, Score score) {
       daysLeft--;
-      if (player.GetScore().GetCorruption() == 100) {
+      if (player.GetScore().corruption == 100) {
           Console.Clear();
           world.PrisonGameOver();
           MakeDone();
@@ -57,7 +57,7 @@ class Context {
           current = world.GetEntry();
           current.NewDayMessage(this.GetDaysLeft());
           Console.WriteLine("This is your updated status based upon the nature of the deal:");
-          Console.WriteLine($"Corruption = {player.GetScore().GetCorruption()} ({score.GetCorruption()}), Popularity = {player.GetScore().GetPopularity()} ({score.GetPopularity()}), Power = {player.GetScore().GetPower()} ({score.GetPower()})");
+          Console.WriteLine($"Corruption = {player.GetScore().corruption} ({score.corruption}), Popularity = {player.GetScore().popularity} ({score.popularity}), Power = {player.GetScore().power} ({score.power})");
           Console.Write("\nPress any key to continue:");
           Console.ReadKey(intercept: true);
           Console.Clear();
