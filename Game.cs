@@ -150,8 +150,4 @@ class Game
     }
     return output; //The output is then returned.
   }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> mariusbranch
