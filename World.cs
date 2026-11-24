@@ -10,7 +10,7 @@ class World
   {
     this.player = player; 
 
-    string jsonAllDilemma = File.ReadAllText("dilemma.json");
+    string jsonAllDilemma = File.ReadAllText("jsonfiles/dilemma.json");
     Dictionary<string, Dilemma> allDilemma = JsonSerializer.Deserialize<Dictionary<string, Dilemma>>(jsonAllDilemma);
     
     Space square = new Space("Town Square", "You are now in the middle of the city.\nGo explore!");
