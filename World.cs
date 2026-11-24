@@ -104,7 +104,7 @@ class World
       Console.Write("\nPress any key to continue:");
       Console.ReadKey(intercept: true);
       Console.Clear();
-        if (player.GetScore().popularity >= 40) {
+        if (player.GetScore().popularity >= 60) {
             Console.WriteLine("The crowd erupts in applause");
             Console.Write("\nPress any key to continue:");
             Console.ReadKey(intercept: true);
