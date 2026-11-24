@@ -2,8 +2,8 @@
   "billionaire": {
     "dilemma": [
       "Billionaire: I thought my mind was playing a trick with me, Mr. {playerName}, what are you doing here. ",
-      "{playerName}: oh just making my way around the city making some connections before the election, you know, helping the people i serve. ",
-      "Bilionaire: well am i glad you said that. You see, I\u0027m in a bit of a pickle. I\u0027ve been planning to build a small get-away cabin in the woods like a vacation house, but close to home.  ",
+      "{playerName}: Oh just making my way around the city making some connections before the election, you know, helping the people i serve. ",
+      "Bilionaire: Well am i glad you said that. You see, I'm in a bit of a pickle. I've been planning to build a small get-away cabin in the woods like a vacation house, but close to home.  ",
       "{playerName}: Sounds amazing, it would certainly increase the interest newcomers would have in the city. ",
       "Bilionaire: Well, there is just one small problem. I want to build it in the forest but someone a long time ago decided it was a protected property forest so i can\u0027t build it there. Let\u0027s just say that if the forest is no longer protected, you might find a cabin with your name on the mailbox. "
     ],
@@ -12,30 +12,30 @@
   },
   "lawyer": {
     "dilemma": [
-      "Lawyer: Welcome MR. {playerName} what brings you to my humble offices",
-      "{playerName}: oh i wouldn\u0027t say humble, your place is massive, with beautiful offices, do you rent them out, I\u0027ve been looking around. ",
+      "Lawyer: Welcome Mr. {playerName} what brings you to my humble offices",
+      "{playerName}: Oh i wouldn\u0027t say humble, your place is massive, with beautiful offices, do you rent them out, I\u0027ve been looking around. ",
       "Lawyer: Well we want to, you know to give something more to the city, but we run into a problem. You see prosecuting everyone for everything takes a lot of associates and space. ",
-      "{playerName}: oh i wouldn\u0027t say humble, your place is massive, with beautiful offices, do you rent them out, I\u0027ve been looking around. But if we could get our hands on the bottom floor from the people at r\u00F8dekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. "
+      "{playerName}: But if we could get our hands on the bottom floor from the people at r\u00F8dekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. "
     ],
     "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 5 }
   },
   "bank": {
     "dilemma": [
-      "Bank manager: Well hello there {playerName}, i have a proposal for you. Theoretically, what would you say if I could give you access to a secret account with 500.000 dkk as a campaign contribution. ",
+      "Bank manager: Well hello there {playerName}, I have a proposal for you. Theoretically, what would you say if I could give you access to a secret account with 500.000 DKK as a campaign contribution. ",
       "{playerName}: Well, no one would give the new town politician that amount of money, so I sound like you want something in return. ",
-      "Bank Manager: you are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. "
+      "Bank Manager: You are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. "
     ],
     "accepted":"",
     "score": { "corruption": 35, "popularity": -15, "power": 15 }
   },
   "festival": {
     "dilemma": [
-      "Festival organizer: Oh MR. {playerName} am i glad to see you. ",
-      "{playerName}: always a pleasure, I was just in the neighborhood and thought i would swing by to see how the progress is going with the festival. ",
+      "Festival organizer: Oh Mr. {playerName}, am I glad to see you. ",
+      "{playerName}: Always a pleasure, I was just in the neighborhood and thought i would swing by to see how the progress is going with the festival. ",
       "Festival organizer: Well {playerName}, we are trying to get accessibility ramps throughout the festival, but it will put us over the budget. ",
-      "{playerName}: ohh Im so sorry to hear, is there anything i could do. ",
-      "Festival organizer: Well the cityhall had always donated to the festival, but this year the money is going to a lunch for you and the other politicians. If maybe you could find it in your heart to get the donation back we could arrange a beautiful lunch here, in the heart of the city and community"
+      "{playerName}: Oh I am so sorry to hear, is there anything I could do. ",
+      "Festival organizer: Well the cityhall had always donated to the festival, but this year the money is going to a lunch for you and the other politicians. If maybe you could find it in your heart to get the donation back, then we could arrange a beautiful lunch here, in the heart of the city and community"
     ],
     "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 5 }
@@ -101,16 +101,16 @@
   },
   "hospital": {
     "dilemma": [
-      "Staff: Hello {playerName}, what a surprise to see you here. in the wards. Are you out checking up on the local healthcare? ",
+      "Staff: Hello {playerName}, what a surprise to see you here in the wards. Are you out checking up on the local healthcare? ",
       "{playerName}: Just walking around and enjoying the city, before the election.",
-      "Staff: I know you properly are very busy, but do you have a couple minuts to help us. We are a bit short-handed in the children\u0027s section today. If you could read a short story for them it would help us alot? Will you do that for us? "
+      "Staff: I know you are probably very busy, but do you have a couple minuts to help us. We are a bit short-handed in the children\u0027s section today. If you could read a short story for them it would help us alot? Will you do that for us? "
     ],
     "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 10 }
   },
   "nursing": {
     "dilemma": [
-      "{playerName}: Hello everyone, looks cosy in here ",
+      "{playerName}: Hello everyone, looks cozy in here ",
       "Staff: didn\u0027t expect you here {playerName}. What can we do for you ",
       "{playerName}: Just walking around the city and looking for people who needs some help",
       "Staff: Actually, you can help serve lunch for the elderly. Don\u0027t know if you would like to help with that? "
