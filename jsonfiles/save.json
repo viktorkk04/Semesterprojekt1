@@ -1,0 +1,9 @@
+{
+  "saveName": "Save1",
+  "player": {
+    "Name": "Marius",
+    "Score": { "corruption": 15, "popularity": 20, "power": 5 }
+  },
+  "daysLeft": 4,
+  "acceptedDilemmas": ["Local Farm"]
+}
