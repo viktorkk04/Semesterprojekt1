@@ -16,7 +16,9 @@ class Dilemma
 
     public Score GetScore() { return this.score;}
 
+    public string GetAccepted() { return this.accepted;}
+
     public void AcceptDilemma(){ isAccepted = true; }
 
-    public bool GetIsAccepted() { return isAccepted; }
+    public bool GetIsAccepted() { return isAccepted; }    
 }

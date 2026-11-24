@@ -7,7 +7,7 @@
       "{playerName}: Sounds amazing, it would certainly increase the interest newcomers would have in the city. ",
       "Bilionaire: Well, there is just one small problem. I want to build it in the forest but someone a long time ago decided it was a protected property forest so i can\u0027t build it there. Let\u0027s just say that if the forest is no longer protected, you might find a cabin with your name on the mailbox. "
     ],
-    "accepted":{"tak for det"},
+    "accepted":"mejer skriv i dem her",
     "score": { "corruption": 30, "popularity": -20, "power": 20 }
   },
   "lawyer": {
@@ -17,6 +17,7 @@
       "Lawyer: Well we want to, you know to give something more to the city, but we run into a problem. You see prosecuting everyone for everything takes a lot of associates and space. ",
       "{playerName}: oh i wouldn\u0027t say humble, your place is massive, with beautiful offices, do you rent them out, I\u0027ve been looking around. But if we could get our hands on the bottom floor from the people at r\u00F8dekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. "
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 5 }
   },
   "bank": {
@@ -25,6 +26,7 @@
       "{playerName}: Well, no one would give the new town politician that amount of money, so I sound like you want something in return. ",
       "Bank Manager: you are a smart man, I like that. I know after this election the city is going to make some large investments that requires some loans. All I ask for you is to consider my bank as the bank to loan that money from, even though we might not have the best terms regarding the citizens of the city. "
     ],
+    "accepted":"",
     "score": { "corruption": 35, "popularity": -15, "power": 15 }
   },
   "festival": {
@@ -35,6 +37,7 @@
       "{playerName}: ohh Im so sorry to hear, is there anything i could do. ",
       "Festival organizer: Well the cityhall had always donated to the festival, but this year the money is going to a lunch for you and the other politicians. If maybe you could find it in your heart to get the donation back we could arrange a beautiful lunch here, in the heart of the city and community"
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 5 }
   },
   "shelter": {
@@ -43,6 +46,7 @@
       "{playerName}: Just walking around the city and looking for people who needs some help.",
       "Staff: To be honest, we just received a big donation of warm winter clothes, but we lack hands to sort them out to the residents. Would you be willing to help us with that? "
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 15, "power": 0 }
   },
   "sport": {
@@ -54,6 +58,7 @@
       "Club Volunteer: Exactly. A few hours of your time means dozens of children get a great day of sports.",
       "Club Volunteer: Can you help us, and volunteer at the tournament? "
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 5 }
   },
   "company": {
@@ -65,6 +70,7 @@
       "Company Manager: Let\u0027s just say we\u0027d both benefit. The process is slow enough already. ",
       "Company Manager: Could you help the company secure the contract through your personal connections?"
     ],
+    "accepted":"",
     "score": { "corruption": 15, "popularity": -5, "power": 20 }
   },
   "farm": {
@@ -76,6 +82,7 @@
       "Farm Owner:  Yes, but I NEED the money! Please! I will make a personal delivery every week with free items from my farm...",
       "Farm Owner: Will you use your influence, and reduce legislation to help me?"
     ],
+    "accepted":"",
     "score": { "corruption": 15, "popularity": -10, "power": 5 }
   },
   "construction": {
@@ -89,6 +96,7 @@
       "Construction Foreman: It\u0027ll be fixed eventually. Why hold up the whole project over a few minor details?",
       "Construction Foreman: Could you use your influence to reduce the scrutiny of the forthcoming inspection?"
     ],
+    "accepted":"",
     "score": { "corruption": 30, "popularity": -10, "power": 10 }
   },
   "hospital": {
@@ -97,6 +105,7 @@
       "{playerName}: Just walking around and enjoying the city, before the election.",
       "Staff: I know you properly are very busy, but do you have a couple minuts to help us. We are a bit short-handed in the children\u0027s section today. If you could read a short story for them it would help us alot? Will you do that for us? "
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 20, "power": 10 }
   },
   "nursing": {
@@ -106,6 +115,7 @@
       "{playerName}: Just walking around the city and looking for people who needs some help",
       "Staff: Actually, you can help serve lunch for the elderly. Don\u0027t know if you would like to help with that? "
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 15, "power": 10 }
   },
   "school": {
@@ -114,6 +124,7 @@
       "{playerName}: And what were you thinking should do ",
       "Principal: If you just had some inspirational words to motivate the young people, that will be all we need from you. What do you say?"
     ],
+    "accepted":"",
     "score": { "corruption": 0, "popularity": 10, "power": 10 }
   }
 }

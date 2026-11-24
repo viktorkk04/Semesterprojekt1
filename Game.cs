@@ -104,9 +104,10 @@ class Game
                 
                 if (input == 'y') {
                     CurrentDilemma.AcceptDilemma();
+                    string newAccepted = CurrentDilemma.GetAccepted();
                     Score newScore = CurrentDilemma.GetScore();
                     player.CalculateScore(newScore);
-                    context.NewDay(world, player, newScore);
+                    context.NewDay(world, player, newAccepted, newScore);
                     dealDone = true;
                 } else if (input == 'n') {
                     context.GetCurrent().Welcome();
@@ -116,7 +117,7 @@ class Game
                     continue;
                 }
             }
-        } catch (NullReferenceException){
+             } catch (NullReferenceException){
             Console.WriteLine("Nothing to interact with here");
         }
             break;
