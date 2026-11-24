@@ -1,21 +1,25 @@
 public class Player {
-    private string _name;
-    private Score _score;
+    public string Name { get; private set; }
+    public Score Score { get; private set; }
 
     public Player (string name, Score score) {
-        this._name = name;
-        this._score = score;
+        this.Name = name;
+        this.Score = score;
     }
 
-    public string GetName() { return this._name; }
+    public string GetName() { return this.Name; }
 
-    public Score GetScore() { return this._score; }
+    public Score GetScore() { return this.Score; }
 
-    public void SetScore(Score score){ this._score = score; }
+    public void SetScore(Score score){ this.Score = score; }
 
     public void CalculateScore(Score score) {
-        this._score.AddPower(score.power);
-        this._score.AddCorruption(score.corruption);
-        this._score.AddPopularity(score.popularity);
+        this.Score.AddPower(score.power);
+        this.Score.AddCorruption(score.corruption);
+        this.Score.AddPopularity(score.popularity);
+    }
+
+    public override string ToString() {
+        return $"Player: {Name}, Score: {Score}";
     }
 }
