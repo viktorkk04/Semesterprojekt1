@@ -139,7 +139,7 @@ class Game
       }
     }
     Console.WriteLine("");
-    Console.WriteLine("Game Over!");
+    Console.WriteLine("");
   }
 
   private static string[] GetParameters(string[] input)

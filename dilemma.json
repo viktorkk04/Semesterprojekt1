@@ -18,7 +18,7 @@
       "{playerName}: But if we could get our hands on the bottom floor from the people at r\u00F8dekors we could expand. You know, I have some leverage over some of them and with a little help from you we could kick them out and find a nice office for you. "
     ],
     "accepted":"",
-    "score": { "corruption": 0, "popularity": 20, "power": 5 }
+    "score": { "corruption": 30, "popularity": -20, "power": 20 }
   },
   "bank": {
     "dilemma": [
