@@ -4,7 +4,7 @@ using System.Text.Json;
 class World
 {
   Space square;
-  Player player;
+  public Player player { get; set; }
   
   public World(Player player)
   {
@@ -85,13 +85,10 @@ class World
   {
     return square;
   }
-  
-  public void SetPlayer(Player player)
-  {
-     this.player = player;
-  }
 
   public void GameOver() {
+      Highscore.AddPlayer(player);
+      
       Console.WriteLine("The game is now over");
       Console.WriteLine($"The electionday has come and the people has now voted, and your final score based upon your choices is {player.GetScore()}");
       Console.WriteLine("This score has had an influence in the results of your election");

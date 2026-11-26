@@ -1,0 +1,18 @@
+[
+  {
+    "_name": "jeppe",
+    "_score": {
+      "corruption": 30,
+      "popularity": 20,
+      "power": 10
+    }
+  },
+  {
+    "_name": "marius",
+    "_score": {
+      "corruption": 15,
+      "popularity": 20,
+      "power": 5
+    }
+  }
+]

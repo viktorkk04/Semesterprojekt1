@@ -79,6 +79,7 @@ class Game
           Console.WriteLine(" - interact    Interact with a room");
           Console.WriteLine(" - map         Diaplay map and current location");
           Console.WriteLine(" - status      To see your status");
+          Console.WriteLine(" - highscore  Display a list of players scores");
           Console.WriteLine(" - help        Display a help message");
           break;
         case "interact":
@@ -130,11 +131,21 @@ class Game
             Console.ReadKey(intercept: true);
             Console.Clear();
             context.GetCurrent().Welcome();
-            
+            break;
+        case "highscore" :
+            Console.Clear();
+            Highscore.DisplayHighscores();
+            Console.Write("\nPress any key to exit highscore menu:");
+            Console.ReadKey(intercept: true);
+            Console.Clear();
+            context.GetCurrent().Welcome();
             break;
         default:
           Console.WriteLine("Woopsie, I don't understand '" + command + "'");
           break;
+        case "gameover" :            // Debug code - please remove
+            world.GameOver();        // Debug code - please remove
+            break;                   // Debug code - please remove
       }
     }
     Console.WriteLine("");
