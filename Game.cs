@@ -105,6 +105,7 @@ class Game
                 
                 if (input == 'y') {
                     CurrentDilemma.AcceptDilemma();
+                    string newAccepted = CurrentDilemma.GetAccepted();
                     Score newScore = CurrentDilemma.GetScore();
                     player.CalculateScore(newScore);
                     context.NewDay(world, player, newScore);
