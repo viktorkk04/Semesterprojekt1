@@ -4,8 +4,7 @@ class Dilemma
     public Score score { get; set; }
     public string accepted { get; private set; }
     bool isAccepted {get; set ;} = false;
-    
-    public Dilemma(List<string> dilemma, Score score)
+        public Dilemma(List<string> dilemma, string accepted, Score score)
     {
         this.dilemma = dilemma;
         this.score = score;
